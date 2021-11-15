@@ -1,5 +1,12 @@
-# Автоматические тесты
+Третий проект по изучению Python-разработки.
 
-После завершения всех шагов в проекте, вам станут доступны автоматические тесты. Тесты запускаются на каждый коммит - после завершения всех заданий в интерфейсе Хекслета, сделайте коммит, и тесты заработают автоматически.
+Задача утилиты - скачивать веб-страницы на жесктий диск.
 
-Файл hexlet-check.yml отвечает за запуск этих тестов - не удаляйте этот файл, не редактируйте его и не переименовывайте репозиторий.
+### Codecilmate badge:
+[![Maintainability](https://api.codeclimate.com/v1/badges/92ef0e335aaad50b85af/maintainability)](https://codeclimate.com/github/Nidenai/python-project-lvl3/maintainability)
+###Test Coverage badge: 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/92ef0e335aaad50b85af/test_coverage)](https://codeclimate.com/github/Nidenai/python-project-lvl3/test_coverage)
+### Hexlet check and Linter Status
+[![Actions Status](https://github.com/Nidenai/python-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/Nidenai/python-project-lvl3/actions)
+### My test
+[![Actions Status](https://github.com/Nidenai/python-project-lvl3/workflows/actions/badge.svg)](https://github.com/Nidenai/python-project-lvl3/actions)
