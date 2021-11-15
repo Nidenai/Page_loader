@@ -23,4 +23,4 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry.scripts]
-gendiff = "gendiff.scripts.gendiff:main"
+page-loader = "page_loader.scripts.page-loader:download"
