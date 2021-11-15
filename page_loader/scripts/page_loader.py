@@ -1,25 +1,10 @@
-import requests
-import os
-
-
-def download(url):
-    with requests.get(url, stream=True) as r:
-        with open(os.path.join(os.getcwd(), naming_file(url)), 'wb') as keyfile:
-            for chunk in r.iter_content(chunk_size=128):
-                keyfile.write(chunk)
-    keyfile.close()
-    return keyfile
-
-
-def naming_file(file):
-    v = str(file)
-    var = v.replace('https://', '')
-    result = var.replace('/', '-') + '.html'
-    return result
+from page_loader.engine.engine import download
+from page_loader.cli import function
 
 
 def main():
-    download(url)
+    parser = function()
+    download(parser.file)
 
 
 if __name__ == '__main__':
