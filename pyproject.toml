@@ -4,8 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["Nidenai <30Dk81Yz>"]
 packages = [
-    { include = 'page-loader' },
+    { include = 'page_loader' },
 ]
+
+
+[tool.poetry.scripts]
+page-loader = "page_loader.scripts.page_loader:main"
+
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -22,5 +27,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 
-[tool.poetry.scripts]
-page-loader = "page_loader.scripts.page-loader:download"
+
