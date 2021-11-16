@@ -4,7 +4,7 @@ from page_loader.cli import function
 
 def main():
     parser = function()
-    download(parser.file)
+    download(parser.url, parser.output)
 
 
 if __name__ == '__main__':

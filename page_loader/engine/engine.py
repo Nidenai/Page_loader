@@ -2,9 +2,11 @@ import requests
 import os
 
 
-def download(url):
+def download(url, path_=os.getcwd()):
+    filepath = os.path.join(os.getcwd(), to_path(path_), naming_file(url))
+    existing_path(to_path(path_))
     with requests.get(url, stream=True) as r:
-        with open(os.path.join(os.getcwd(), naming_file(url)), 'wb') as kfile:
+        with open(filepath, 'wb+') as kfile:
             for chunk in r.iter_content(chunk_size=128):
                 kfile.write(chunk)
     kfile.close()
@@ -14,5 +16,22 @@ def download(url):
 def naming_file(file):
     v = str(file)
     v = v.replace('https://', '')
-    result =v.replace('/', '-') + '.html'
+    v = v.replace('www.', '')
+    result = v.replace('/', '-') + '.html'
     return result
+
+
+def to_path(path_):
+    if path_ == '':
+        return path_
+    path = os.path.normpath(path_)
+    result = path.split(os.sep)
+    result = os.path.join(*result)
+    return result
+
+
+def existing_path(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+    elif os.path.exists(path):
+        pass
