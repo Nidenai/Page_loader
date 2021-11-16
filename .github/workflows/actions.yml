@@ -19,7 +19,7 @@ jobs:
           make lint
       - name: Run Tests
         run: |
-          make testing
+          make test
       - name:  Coverage report
         uses: paambaati/codeclimate-action@v2.7.5
         env:

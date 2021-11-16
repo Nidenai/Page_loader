@@ -1,6 +1,11 @@
-from constants import URL
 from page_loader.engine.engine import download
 import os
+
+
+HTML_FILE = os.path.join(os.getcwd(),
+                         'tests', 'fixtures', 'ru.hexlet.io-courses.html')
+URL = 'https://ru.hexlet.io/courses'
+NAME = 'ru.hexlet.io-courses.html'
 
 
 def test_naming():
