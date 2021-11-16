@@ -3,7 +3,7 @@ from page_loader.engine.engine import download
 import os
 
 
-def naming_test():
+def test_naming():
     test_name = os.path.basename(os.path.join(os.getcwd(),
                                               'fixtures',
                                               'ru.hexlet.io-courses.html'))

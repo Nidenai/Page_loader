@@ -13,6 +13,6 @@ def download(url):
 
 def naming_file(file):
     v = str(file)
-    var = v.replace('https://', '')
-    result = var.replace('/', '-') + '.html'
+    v = v.replace('https://', '')
+    result =v.replace('/', '-') + '.html'
     return result
