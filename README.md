@@ -13,3 +13,7 @@
 
 ### My test
 [![Actions Status](https://github.com/Nidenai/python-project-lvl3/workflows/actions/badge.svg)](https://github.com/Nidenai/python-project-lvl3/actions)
+
+
+###Пример работы утилиты 
+[![asciicast](https://asciinema.org/a/1zx82wafaQAgDuAb5sNPyl7Fx.svg)](https://asciinema.org/a/1zx82wafaQAgDuAb5sNPyl7Fx)
