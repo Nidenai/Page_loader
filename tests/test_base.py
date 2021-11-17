@@ -15,6 +15,7 @@ def clear_experiment():
     else:
         pass
 
+
 def test_naming():
     clear_experiment()
     test_name = os.path.basename(os.path.join(os.getcwd(),
