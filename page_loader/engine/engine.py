@@ -45,5 +45,3 @@ def make_catalog(name):
         os.mkdir(name)
     else:
         pass
-
-
