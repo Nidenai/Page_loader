@@ -16,3 +16,6 @@ def test_naming():
     name = os.path.basename(os.path.join(os.getcwd(),
                                          'ru.hexlet.io-courses.html'))
     assert name == test_name
+
+
+def test_content():
