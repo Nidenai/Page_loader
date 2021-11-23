@@ -1,37 +1,23 @@
-import requests
 import os
+
+import requests
+
+from page_loader.engine.auxiliary import naming_file, to_path, \
+    existing_path, make_catalog
+from page_loader.engine.image_parser import parse_image, replace_html
 
 
 def download(url, path_=os.getcwd()):
-    filepath = os.path.join(os.getcwd(), to_path(path_), naming_file(url))
+    filename = naming_file(url)
+    filepath = os.path.join(os.getcwd(), to_path(path_), filename)
     existing_path(to_path(path_))
     with requests.get(url, stream=True) as r:
-        with open(filepath, 'wb+') as kfile:
+        with open(filepath, 'wb+') as keyfile:
             for chunk in r.iter_content(chunk_size=128):
-                kfile.write(chunk)
-    kfile.close()
-    return kfile
-
-
-def naming_file(file):
-    v = str(file)
-    v = v.replace('https://', '')
-    v = v.replace('www.', '')
-    result = v.replace('/', '-') + '.html'
-    return result
-
-
-def to_path(path_):
-    if path_ == '':
-        return path_
-    path = os.path.normpath(path_)
-    result = path.split(os.sep)
-    result = os.path.join(*result)
-    return result
-
-
-def existing_path(path):
-    if not os.path.exists(path):
-        os.makedirs(path)
-    elif os.path.exists(path):
-        pass
+                keyfile.write(chunk)
+    keyfile.close()
+    make_catalog(filepath)
+    catalog_name = filepath.replace('.html', '_files')
+    parse_image(filepath, catalog_name)
+    replace_html(filepath)
+    return keyfile
