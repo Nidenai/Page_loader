@@ -44,5 +44,12 @@ def naming_png(url):
         pass
     else:
         v = v + '.png'
-    result = v.replace('/', '-')
+    v = v.replace('/', '-')
+    if v.startswith('--'):
+        v = v.replace('--', '', 1)
+    elif v.startswith('-'):
+        v = v.replace('-', '', 1)
+    else:
+        pass
+    result = v
     return result

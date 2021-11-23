@@ -1,8 +1,9 @@
 import os
-from page_loader.engine.auxiliary import existing_path, naming_png
-from bs4 import BeautifulSoup as BS
-import requests as re
 
+import requests as re
+from bs4 import BeautifulSoup as BS
+
+from page_loader.engine.auxiliary import existing_path, naming_png
 
 file = 'tmp/example.html'
 
@@ -39,4 +40,28 @@ def format_data(list):
     for item in list:
         if item.startswith('http'):
             result.append(item)
+        elif item.startswith("//"):
+            result.append(item.replace("//", 'http://'))
     return result
+
+
+def naming_path_to_img(url, file):
+    f = file.replace('.html', '') + '_files'
+    return os.path.join(f, naming_png(url))
+
+
+def format_path_to_img(file):
+    file = os.path.normpath(file)
+    file = file.split(os.sep)
+    return file[-1]
+
+
+def replace_html(file):
+    with open(file, 'r', encoding='utf-8') as fp:
+        content = fp.read()
+        soup = BS(content, "html.parser")
+        for link in soup.find_all('img'):
+            v = link.attrs
+            v['src'] = naming_path_to_img(v['src'], format_path_to_img(file))
+    with open(file, 'w+', encoding='utf-8') as k:
+        k.write(str(soup))
