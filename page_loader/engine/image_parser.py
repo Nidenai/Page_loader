@@ -1,11 +1,9 @@
 import os
 
 import requests as re
-from bs4 import BeautifulSoup as BS
+from bs4 import BeautifulSoup as bs
 
 from page_loader.engine.auxiliary import existing_path, naming_png
-
-file = 'tmp/example.html'
 
 
 def parse_image(data, path_=os.getcwd()):
@@ -18,7 +16,7 @@ def finder_image(file):
     result = []
     fp = open(file, 'r', encoding='utf-8')
     content = fp.read()
-    soup = BS(content, "html.parser")
+    soup = bs(content, "html.parser")
     for link in soup.find_all('img'):
         result.append(link.get('src'))
     return result
@@ -59,7 +57,7 @@ def format_path_to_img(file):
 def replace_html(file):
     with open(file, 'r', encoding='utf-8') as fp:
         content = fp.read()
-        soup = BS(content, "html.parser")
+        soup = bs(content, "html.parser")
         for link in soup.find_all('img'):
             v = link.attrs
             v['src'] = naming_path_to_img(v['src'], format_path_to_img(file))
