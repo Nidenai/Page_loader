@@ -1,5 +1,5 @@
 import os
-
+from progress.bar import Bar
 import requests as re
 from bs4 import BeautifulSoup as bs
 
@@ -8,8 +8,12 @@ from page_loader.engine.auxiliary import existing_path, naming_png
 
 def parse_image(data, path_=os.getcwd()):
     data = format_data(finder_image(data))
-    for url in data:
-        download_image(url, path_)
+    with Bar('Collecting images', max=20) as bar:
+        for i in range(20):
+            for url in data:
+                download_image(url, path_)
+                bar.next()
+    bar.finish()
 
 
 def finder_image(file):
