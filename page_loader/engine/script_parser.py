@@ -5,8 +5,8 @@ import requests as re
 from bs4 import BeautifulSoup as BS
 from progress.bar import Bar
 
-from page_loader.engine.auxiliary import naming_file, \
-    existing_path, make_catalog
+from page_loader.engine.auxiliary import existing_path, \
+    naming_script, adding_http
 
 
 def finder_script(file):
