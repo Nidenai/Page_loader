@@ -9,24 +9,24 @@ from page_loader.engine.auxiliary import existing_path, \
     naming_script, adding_http
 
 
-def finder_script(file):
+def finder_html(file):
     result = []
     fp = open(file, 'r', encoding='utf-8')
     content = fp.read()
     soup = BS(content, "html.parser")
-    for link in soup.find_all('script'):
-        if link.get('src') is not None:
-            result.append(link.get('src'))
+    for link in soup.find_all('link'):
+        if link.get('href'):
+            result.append(link.get('href'))
         else:
             pass
     return result
 
 
-def download_script(data, path_=os.getcwd()):
+def download_link(data, path_=os.getcwd()):
     existing_path(path_)
-    with Bar('Скачиваем скрипты', max=20) as bar:
-        for i in range(20):
-            for url in data:
+    with Bar('Скачиваем ссылки') as bar:
+        for url in data:
+            for i in range(2):
                 o = urlparse(url)
                 scriptname = naming_script(o.geturl())
                 filepath = os.path.join(path_, scriptname)
@@ -38,5 +38,6 @@ def download_script(data, path_=os.getcwd()):
     bar.finish()
 
 
-def parse_scripts(file, path_=os.getcwd()):
-    download_script(finder_script(file), path_)
+def parse_links(file, path_=os.getcwd()):
+    data = finder_html(file)
+    download_link(data, path_)
