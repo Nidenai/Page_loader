@@ -19,6 +19,7 @@ requests = "^2.26.0"
 coverage = "^6.1.2"
 pytest = "^6.2.5"
 bs4 = "^0.0.1"
+progress = "^1.6"
 
 [tool.poetry.dev-dependencies]
 coverage = "^6.1.2"

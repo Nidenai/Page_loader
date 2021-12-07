@@ -1,24 +1,28 @@
 import os
 
 import requests as re
-from bs4 import BeautifulSoup as BS
+from bs4 import BeautifulSoup as bs
+from progress.bar import Bar
 
-from page_loader.engine.auxiliary import existing_path, naming_png
-
-file = 'tmp/example.html'
+from page_loader.engine.auxiliary import existing_path, naming_png, \
+    format_path_to_source
 
 
 def parse_image(data, path_=os.getcwd()):
     data = format_data(finder_image(data))
-    for url in data:
-        download_image(url, path_)
+    with Bar('Collecting images', max=20) as bar:
+        for i in range(20):
+            for url in data:
+                download_image(url, path_)
+                bar.next()
+    bar.finish()
 
 
 def finder_image(file):
     result = []
     fp = open(file, 'r', encoding='utf-8')
     content = fp.read()
-    soup = BS(content, "html.parser")
+    soup = bs(content, "html.parser")
     for link in soup.find_all('img'):
         result.append(link.get('src'))
     return result
@@ -50,18 +54,13 @@ def naming_path_to_img(url, file):
     return os.path.join(f, naming_png(url))
 
 
-def format_path_to_img(file):
-    file = os.path.normpath(file)
-    file = file.split(os.sep)
-    return file[-1]
-
-
 def replace_html(file):
     with open(file, 'r', encoding='utf-8') as fp:
         content = fp.read()
-        soup = BS(content, "html.parser")
+        soup = bs(content, "html.parser")
         for link in soup.find_all('img'):
             v = link.attrs
-            v['src'] = naming_path_to_img(v['src'], format_path_to_img(file))
+            v['src'] = naming_path_to_img(v['src'],
+                                          format_path_to_source(file))
     with open(file, 'w+', encoding='utf-8') as k:
         k.write(str(soup))

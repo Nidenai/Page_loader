@@ -1,5 +1,6 @@
 from page_loader.engine.engine import download
 import os
+import shutil
 
 HTML_FILE = os.path.join(os.getcwd(),
                          'tests', 'fixtures', 'example.html')
@@ -13,7 +14,7 @@ def clear_():
     if os.path.isfile(os.path.join(PATH_FOR_FILE, NAME)):
         os.remove(os.path.join(PATH_FOR_FILE, NAME))
     elif os.path.isdir(os.path.join(PATH_FOR_FILE, CATALOG_NAME)):
-        os.rmdir((os.path.join(PATH_FOR_FILE, CATALOG_NAME)))
+        shutil.rmtree((os.path.join(PATH_FOR_FILE, CATALOG_NAME)))
     else:
         pass
 

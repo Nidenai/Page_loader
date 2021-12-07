@@ -5,6 +5,8 @@ import requests
 from page_loader.engine.auxiliary import naming_file, to_path, \
     existing_path, make_catalog
 from page_loader.engine.image_parser import parse_image, replace_html
+from page_loader.engine.script_parser import parse_scripts, replace_script
+from page_loader.engine.html_parser import parse_links, replace_link
 
 
 def download(url, path_=os.getcwd()):
@@ -20,4 +22,8 @@ def download(url, path_=os.getcwd()):
     catalog_name = filepath.replace('.html', '_files')
     parse_image(filepath, catalog_name)
     replace_html(filepath)
+    parse_scripts(filepath, catalog_name)
+    parse_links(filepath, catalog_name)
+    replace_script(filepath)
+    replace_link(filepath)
     return keyfile
