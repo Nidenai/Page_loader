@@ -77,3 +77,14 @@ def naming_script(url):
         pass
     result = v
     return result
+
+
+def format_path_to_source(file):
+    file = os.path.normpath(file)
+    file = file.split(os.sep)
+    return file[-1]
+
+
+def naming_path_to_source(url, file):
+    f = file.replace('.html', '') + '_files'
+    return os.path.join(f, naming_script(url))
