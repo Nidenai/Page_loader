@@ -6,7 +6,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/92ef0e335aaad50b85af/maintainability)](https://codeclimate.com/github/Nidenai/python-project-lvl3/maintainability)
 
 
-###Test Coverage badge: 
+###Test Coverage badge:
+
 [![Test Coverage](https://api.codeclimate.com/v1/badges/92ef0e335aaad50b85af/test_coverage)](https://codeclimate.com/github/Nidenai/python-project-lvl3/test_coverage)
 
 
