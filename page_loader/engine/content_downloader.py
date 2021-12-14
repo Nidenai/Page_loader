@@ -3,7 +3,7 @@ import random
 
 import requests as re
 from bs4 import BeautifulSoup as bs
-
+from progress.bar import Bar
 from page_loader.engine.auxiliary import existing_path
 
 pull = ['Создаем красоту', 'Скачиваем всякое',
@@ -78,6 +78,13 @@ def naming_path_to_source(url, file):
 
 def parsing(file, source, path_=os.getcwd()):
     data = finder(file, source)
-    for url in data:
-        download_content(url, path_)
+    count = len(data)
+    with Bar('Progress', max=count) as bar:
+        for url in data:
+            for i in range(count):
+                download_content(url, path_)
+                bar.next()
+    bar.finish()
     replace(file, source)
+
+
