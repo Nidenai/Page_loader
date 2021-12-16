@@ -1,16 +1,10 @@
 import os
-import random
 
 import requests as re
 from bs4 import BeautifulSoup as bs
-from progress.bar import Bar
+from loguru import logger
+
 from page_loader.engine.auxiliary import existing_path
-
-pull = ['Создаем красоту', 'Скачиваем всякое',
-        "Лепим нелепимое", "Сохраняем все на ваш компьютер",
-        "Воруем у укравших", "Ищем ляпы"]
-
-RANDOM_FOR_BAR = random.choice(pull)
 
 
 def finder(file, source):
@@ -26,13 +20,13 @@ def finder(file, source):
 
 def download_content(url, path_=os.getcwd()):
     existing_path(path_)
-    imagename = naming_file(url)
-    filepath = os.path.join(path_, imagename)
-    with re.get(url, stream=True) as image:
-        with open(filepath, 'wb+') as downloaded_image:
-            for chunk in image.iter_content(chunk_size=128):
-                downloaded_image.write(chunk)
-    downloaded_image.close()
+    filename = naming_file(url)
+    filepath = os.path.join(path_, filename)
+    with re.get(url, stream=True) as q:
+        with open(filepath, 'wb+') as downloaded_file:
+            for chunk in q.iter_content(chunk_size=128):
+                downloaded_file.write(chunk)
+    downloaded_file.close()
 
 
 def naming_file(url):
@@ -77,14 +71,10 @@ def naming_path_to_source(url, file):
 
 
 def parsing(file, source, path_=os.getcwd()):
+    logger.add('debug.log', format='{time}, {level}, {message}',
+               level="DEBUG", rotation='100 Kb')
     data = finder(file, source)
-    count = len(data)
-    with Bar('Progress', max=count) as bar:
-        for url in data:
-            for i in range(count):
-                download_content(url, path_)
-                bar.next()
-    bar.finish()
+    logger.debug(data)
+    for url in data:
+        download_content(url, path_)
     replace(file, source)
-
-

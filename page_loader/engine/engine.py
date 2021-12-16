@@ -1,16 +1,21 @@
 import os
 
 import requests
-
+from loguru import logger
 from page_loader.engine.auxiliary import naming_file, to_path, \
     existing_path, make_catalog
 from page_loader.engine.constants import IMG, LINK, SCRIPT
 from page_loader.engine.content_downloader import parsing
+from progress.bar import Bar
 
 
 def download(url, path_=os.getcwd()):
     filename = naming_file(url)
+    logger.add('debug.json', format='{time}, {level}, {message}',
+               level="DEBUG", rotation='100 Kb')
+    logger.debug(filename)
     filepath = os.path.join(os.getcwd(), to_path(path_), filename)
+    logger.debug(filepath)
     existing_path(to_path(path_))
     with requests.get(url, stream=True) as r:
         with open(filepath, 'wb+') as keyfile:
@@ -19,7 +24,12 @@ def download(url, path_=os.getcwd()):
     keyfile.close()
     make_catalog(filepath)
     catalog_name = filepath.replace('.html', '_files')
-    parsing(filepath, IMG, catalog_name)
-    parsing(filepath, LINK, catalog_name)
-    parsing(filepath, SCRIPT, catalog_name)
+    with Bar('Progress', max=3) as bar:
+        parsing(filepath, IMG, catalog_name)
+        bar.next()
+        parsing(filepath, LINK, catalog_name)
+        bar.next()
+        parsing(filepath, SCRIPT, catalog_name)
+        bar.next()
+    bar.finish()
     return keyfile
