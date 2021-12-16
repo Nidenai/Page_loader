@@ -14,13 +14,13 @@ page-loader = "page_loader.scripts.page_loader:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-flake8 = "^4.0.1"
 requests = "^2.26.0"
 coverage = "^6.1.2"
 pytest = "^6.2.5"
 bs4 = "^0.0.1"
 progress = "^1.6"
 loguru = "^0.5.3"
+flake8 = "^3.9.2"
 
 [tool.poetry.dev-dependencies]
 coverage = "^6.1.2"
