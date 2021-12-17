@@ -11,6 +11,7 @@ from progress.bar import Bar
 
 def download(url, path_=os.getcwd()):
     filename = naming_file(url)
+    logger.remove()
     logger.add('debug.json', format='{time}, {level}, {message}',
                level="DEBUG", rotation='100 Kb')
     logger.debug(filename)
@@ -25,11 +26,11 @@ def download(url, path_=os.getcwd()):
     make_catalog(filepath)
     catalog_name = filepath.replace('.html', '_files')
     with Bar('Progress', max=3) as bar:
-        parsing(filepath, IMG, catalog_name)
+        parsing(filepath, IMG, url, catalog_name)
         bar.next()
-        parsing(filepath, LINK, catalog_name)
+        parsing(filepath, LINK, url, catalog_name)
         bar.next()
-        parsing(filepath, SCRIPT, catalog_name)
+        parsing(filepath, SCRIPT, url, catalog_name)
         bar.next()
     bar.finish()
     return keyfile

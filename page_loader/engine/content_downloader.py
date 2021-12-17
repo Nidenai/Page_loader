@@ -3,18 +3,22 @@ import os
 import requests as re
 from bs4 import BeautifulSoup as bs
 from loguru import logger
+from urllib.parse import urljoin
 
 from page_loader.engine.auxiliary import existing_path
 
 
-def finder(file, source):
+def finder(file, source, url):
     result = []
     content = open(file, 'r', encoding='utf-8').read()
     soup = bs(content, 'html.parser')
     tag, arg = source
     for link in soup.find_all(tag):
         if link.get(arg) is not None:
-            result.append(link.get(arg))
+            if not link.get(arg).startswith('http'):
+                result.append(urljoin(url, link.get(arg)))
+            else:
+                result.append(link.get(arg))
     return result
 
 
@@ -36,6 +40,8 @@ def naming_file(url):
     v = v.replace('www.', '')
     v = v.replace('?', '-')
     v = v.replace('/', '-')
+    v = v.replace('&', '-')
+    v = v.replace(':', '-')
     if v.startswith('--'):
         v = v.replace('--', '', 1)
     elif v.startswith('-'):
@@ -70,10 +76,11 @@ def naming_path_to_source(url, file):
     return os.path.join(f, naming_file(url))
 
 
-def parsing(file, source, path_=os.getcwd()):
-    logger.add('debug.log', format='{time}, {level}, {message}',
+def parsing(file, source, url, path_=os.getcwd()):
+    logger.remove()
+    logger.add('debug.json', format='{time}, {level}, {message}',
                level="DEBUG", rotation='100 Kb')
-    data = finder(file, source)
+    data = finder(file, source, url)
     logger.debug(data)
     for url in data:
         download_content(url, path_)

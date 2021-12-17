@@ -1,3 +1,3 @@
 IMG = ('img', 'src')
-SCRIPT = ('script', 'scr')
+SCRIPT = ('script', 'src')
 LINK = ('link', 'href')
