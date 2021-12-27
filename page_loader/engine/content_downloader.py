@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 from loguru import logger
 from urllib.parse import urljoin
 
-from page_loader.engine.auxiliary import existing_path
+from page_loader.engine.auxiliary import existing_path, check_response
 
 
 def finder(file, source, url):
@@ -23,6 +23,7 @@ def finder(file, source, url):
 
 
 def download_content(url, path_=os.getcwd()):
+    check_response(url)
     existing_path(path_)
     filename = naming_file(url)
     filepath = os.path.join(path_, filename)

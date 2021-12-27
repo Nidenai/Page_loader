@@ -1,4 +1,5 @@
 import os
+import requests
 
 
 def naming_file(file):  # функция нормализует имя сохраняемой страницы
@@ -32,3 +33,10 @@ def make_catalog(name):
         os.mkdir(name)
     else:
         pass
+
+
+def check_response(url):
+    if requests.get(url).status_code == 200:
+        pass
+    else:
+        raise TypeError('Хост не отвечает')
