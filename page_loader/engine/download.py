@@ -11,6 +11,7 @@ from page_loader.engine.auxiliary import check_response
 
 
 def download(url, path_=os.getcwd()):
+    check_response(url)
     filename = naming_file(url)
     logger.remove()
     logger.add('debug.json', format='{time}, {level}, {message}',
