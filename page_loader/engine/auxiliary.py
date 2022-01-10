@@ -41,3 +41,8 @@ def check_response(url):
         pass
     else:
         raise TypeError('Хост не отвечает')
+
+
+def check_folder(path_):
+    if path_ == '/sys':
+        raise TypeError('Некорректный путь')
