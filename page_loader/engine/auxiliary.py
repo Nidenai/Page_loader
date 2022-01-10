@@ -1,4 +1,5 @@
 import os
+
 import requests
 
 
@@ -38,7 +39,5 @@ def make_catalog(name):
 def check_response(url):
     try:
         requests.get(url).status_code
-    except:
+    except requests.exceptions:
         raise TypeError('Хост не отвечает')
-
-
