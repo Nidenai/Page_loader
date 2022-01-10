@@ -7,6 +7,7 @@ from page_loader.engine.auxiliary import naming_file, to_path, \
 from page_loader.engine.constants import IMG, LINK, SCRIPT
 from page_loader.engine.content_downloader import parsing
 from progress.bar import Bar
+from page_loader.engine.auxiliary import check_response
 
 
 def download(url, path_=os.getcwd()):

@@ -37,7 +37,7 @@ def make_catalog(name):
 
 
 def check_response(url):
-    try:
-        requests.get(url).status_code
-    except requests.exceptions:
+    if requests.get(url).status_code == 200:
+        pass
+    else:
         raise TypeError('Хост не отвечает')
