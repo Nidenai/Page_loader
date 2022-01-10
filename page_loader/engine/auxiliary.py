@@ -46,3 +46,5 @@ def check_response(url):
 def check_folder(path_):
     if path_ == '/sys':
         raise TypeError('Некорректный путь')
+    elif not os.path.exists(path):
+        raise TypeError('Путь не существует')
