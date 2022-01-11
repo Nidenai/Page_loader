@@ -1,14 +1,14 @@
 import os
+from urllib.parse import urljoin, urlparse
 
 import requests as re
 from bs4 import BeautifulSoup as bs
 from loguru import logger
-from urllib.parse import urljoin
 
 from page_loader.engine.auxiliary import existing_path, check_response
 
 
-def finder(file, source, url):
+def finder(file, source, url):  # поиск всех ссылок и запихивание их в список
     result = []
     content = open(file, 'r', encoding='utf-8').read()
     soup = bs(content, 'html.parser')
@@ -22,7 +22,7 @@ def finder(file, source, url):
     return result
 
 
-def download_content(url, path_=os.getcwd()):
+def download_content(url, path_=os.getcwd()):  # скачивание контента по ссылке
     check_response(url)
     existing_path(path_)
     filename = naming_file(url)
@@ -34,7 +34,7 @@ def download_content(url, path_=os.getcwd()):
     downloaded_file.close()
 
 
-def naming_file(url):
+def naming_file(url):  # именование файла для сохранения его в папку с ресурсом
     v = str(url)
     v = v.replace('https://', '')
     v = v.replace('http://', '')
@@ -53,7 +53,8 @@ def naming_file(url):
     return result
 
 
-def replace(file, source):
+def replace(file, source):  # замена ссылки в интернете на
+    # путь к ресурсу в странице
     tag, arg = source
     with open(file, 'r', encoding='utf-8') as fp:
         content = fp.read()
@@ -72,17 +73,31 @@ def format_path_to_source(file):
     return file[-1]
 
 
-def naming_path_to_source(url, file):
+def naming_path_to_source(url, file):  # функция создает имя папки,
+    # основываясь на имени файла
     f = file.replace('.html', '') + '_files'
     return os.path.join(f, naming_file(url))
 
 
-def parsing(file, source, url, path_=os.getcwd()):
+def parsing(file, source, url, path_=os.getcwd()):  # объединяющая функция
+    # для скачивания и замены
     logger.remove()
     logger.add('debug.json', format='{time}, {level}, {message}',
                level="DEBUG", rotation='100 Kb')
-    data = finder(file, source, url)
+    data = check_resourse(finder(file, source, url), url)
     logger.debug(data)
     for url in data:
         download_content(url, path_)
     replace(file, source)
+
+
+def check_resourse(list_, url_resourse):
+    result = []
+    for url_base in list_:
+        u = urlparse(url_base)
+        v = urlparse(url_resourse)
+        logger.debug(u.netloc)
+        logger.debug(v.netloc)
+        if u.netloc == v.netloc:
+            result.append(url_base)
+    return result

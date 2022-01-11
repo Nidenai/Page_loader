@@ -28,7 +28,7 @@ def existing_path(path):  # функция проверяет, существу�
         pass
 
 
-def make_catalog(name):
+def make_catalog(name):  # функция создает каталог для ресурсов
     name = name.replace('.html', '') + '_files'
     if not os.path.exists(name):
         os.mkdir(name)
@@ -36,14 +36,14 @@ def make_catalog(name):
         pass
 
 
-def check_response(url):
+def check_response(url):  # проверка соединения
     if requests.get(url).status_code == 200:
         pass
     else:
         raise TypeError('Хост не отвечает')
 
 
-def check_folder(path_):
+def check_folder(path_):  # проверка существования пути
     if path_ == '/sys':
         raise TypeError('Некорректный путь')
     elif not os.path.exists(path_):
