@@ -17,7 +17,7 @@ def finder(file, source, url):  # поиск всех ссылок и запих
     for link in soup.find_all(tag):
         if link.get(arg) is not None:
             if not link.get(arg).startswith('http'):
-                result.append(urljoin(url, check_suffix(link.get(arg))))
+                result.append(urljoin(url, link.get(arg)))
             else:
                 result.append(link.get(arg))
     return result
