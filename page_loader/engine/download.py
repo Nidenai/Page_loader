@@ -1,7 +1,6 @@
 import os
 
 import requests
-from loguru import logger
 from page_loader.engine.auxiliary import naming_file, to_path, \
     existing_path, make_catalog
 from page_loader.engine.constants import IMG, LINK, SCRIPT
@@ -14,12 +13,7 @@ def download(url, path_=os.getcwd()):
     check_response(url)
     check_folder(path_)
     filename = naming_file(url)
-    logger.remove()
-    logger.add('debug.json', format='{time}, {level}, {message}',
-               level="DEBUG", rotation='100 Kb')
-    logger.debug(filename)
     filepath = os.path.join(os.getcwd(), to_path(path_), filename)
-    logger.debug(filepath)
     existing_path(to_path(path_))
     with requests.get(url, stream=True) as r:
         with open(filepath, 'wb+') as keyfile:
