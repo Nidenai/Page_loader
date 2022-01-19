@@ -1,33 +1,38 @@
 import os
 
-import requests
-from page_loader.engine.auxiliary import naming_file, to_path, \
-    existing_path, make_catalog
-from page_loader.engine.constants import IMG, LINK, SCRIPT
-from page_loader.engine.content_downloader import parsing
-from progress.bar import Bar
-from page_loader.engine.auxiliary import check_response, check_folder
+from loguru import logger
+
+from page_loader.engine.classes import Url, Dir, File
+
+
+def download_content(filepath, path_, source, url):
+    sample = File(filepath).find_content(source, url)
+    logger.info('List: ' + str(sample))
+    for link in sample:
+        Url(link).download(path_)
 
 
 def download(url, path_=os.getcwd()):
-    check_response(url)
-    check_folder(path_)
-    filename = naming_file(url)
-    filepath = os.path.join(os.getcwd(), to_path(path_), filename)
-    existing_path(to_path(path_))
-    with requests.get(url, stream=True) as r:
-        with open(filepath, 'wb+') as keyfile:
-            for chunk in r.iter_content(chunk_size=128):
-                keyfile.write(chunk)
-    keyfile.close()
-    make_catalog(filepath)
-    catalog_name = filepath.replace('.html', '_files')
-    with Bar('Progress', max=3) as bar:
-        parsing(filepath, IMG, url, catalog_name)
-        bar.next()
-        parsing(filepath, LINK, url, catalog_name)
-        bar.next()
-        parsing(filepath, SCRIPT, url, catalog_name)
-        bar.next()
-    bar.finish()
-    return keyfile
+    logger.remove()
+    logger.add(os.path.join(os.getcwd(), 'logs', 'debug.json'),
+               format="{message}", level="INFO", rotation="10 MB",
+               compression="zip")
+    filename = File(url).create_html_filename()
+    Url(url).download(path_, filename)
+    logger.info('This is filename: ' + str(filename))
+    filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
+    logger.info('This is path: ' + str(filepath))
+    Dir(filepath).create_html_catalog()
+    catalog = os.path.normpath(filepath).replace('.html', '_files')
+    logger.info('This is folder: ' + str(catalog))
+    args = [File.LINK, File.IMG, File.SCRIPT]
+    for item in args:
+        download_content(filepath, catalog, item, url)
+
+# url = 'https://github.com/Delgan/loguru'
+
+# download(url, 'var/tmp')
+
+# path_ = 'var/tmp/github.com-Delgan-loguru_files'
+# filepath = 'var/tmp/github.com-Delgan-loguru.html'
+# download_content(filepath, path_, File.LINK, url)

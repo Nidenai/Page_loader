@@ -1,5 +1,4 @@
 import os
-from pathlib import PurePath
 from urllib.parse import urljoin, urlparse
 
 import requests as re
@@ -100,10 +99,3 @@ def check_resourse(list_, url_resourse):
         if u.netloc == v.netloc:
             result.append(url_base)
     return result
-
-
-def check_suffix(name):
-    if PurePath(name).suffix == '':
-        return name + '.html'
-    else:
-        return name
