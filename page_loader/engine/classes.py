@@ -16,6 +16,7 @@ class File:
     IMG = ('img', 'src')
     SCRIPT = ('script', 'src')
     LINK = ('link', 'href')
+    LIST_ = [IMG, SCRIPT, LINK]
 
     def __init__(self, file):
         self.file = file
@@ -63,6 +64,23 @@ class File:
                             result.append(link.get(arg))
                             logger.info('Clear argument: ' + (link.get(arg)))
         return result
+
+    def replace_content(self, source, origin_url, catalog):
+        with open(self.file, 'r', encoding='utf-8') as origin:
+            content = bs(origin, 'html.parser')
+            for item in source:
+                tag, arg = item
+                for link in content.find_all(tag):
+                    if link.get(arg) is not None:
+                        if urlparse(link.get(arg)).netloc == \
+                                urlparse(origin_url).netloc:
+                            filename = \
+                                File(link.get(arg)).create_filename()
+                            filepath = os.path.join(os.path.normpath(catalog),
+                                                    filename)
+                            link[arg] = filepath
+        with open(self.file, 'w+', encoding='utf-8') as rewrite_file:
+            rewrite_file.write(str(content))
 
 
 class Dir:

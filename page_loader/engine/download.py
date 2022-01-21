@@ -28,10 +28,12 @@ def download(url, path_=os.getcwd()):
     args = [File.LINK, File.IMG, File.SCRIPT]
     for item in args:
         download_content(filepath, catalog, item, url)
+    File(filepath).replace_content(File.LIST_, url, path_)
 
-# url = 'https://github.com/Delgan/loguru'
 
-# download(url, 'var/tmp')
+url = 'https://github.com/Delgan/loguru'
+
+download(url, 'var/tmp')
 
 # path_ = 'var/tmp/github.com-Delgan-loguru_files'
 # filepath = 'var/tmp/github.com-Delgan-loguru.html'
