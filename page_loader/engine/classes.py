@@ -67,19 +67,31 @@ class File:
         return result
 
     def replace_content(self, source, origin_url, catalog):
+        """Метод меняет ссылки на локальные ресурсы в веб-странице"""
         with open(self.file, 'r', encoding='utf-8') as origin:
             content = bs(origin, 'html.parser')
             for item in tqdm(source, desc='Formatting HTML'):
                 tag, arg = item
                 for link in content.find_all(tag):
                     if link.get(arg) is not None:
-                        if urlparse(link.get(arg)).netloc == \
-                                urlparse(origin_url).netloc:
-                            filename = \
-                                File(link.get(arg)).create_filename()
-                            filepath = os.path.join(os.path.normpath(catalog),
-                                                    filename)
-                            link[arg] = filepath
+                        if not link.get(arg).startswith('http'):
+                            q = urljoin(origin_url, link.get(arg))
+                            if urlparse(q).netloc == \
+                                    urlparse(origin_url).netloc:
+                                filename = \
+                                    File(q).create_filename()
+                                filepath = os.path.join(os.path.normpath
+                                                        (catalog), filename)
+                                link[arg] = filepath
+                        else:
+                            if urlparse(link.get(arg)).netloc == \
+                                    urlparse(origin_url).netloc:
+                                filename = \
+                                    File(link.get(arg)).create_filename()
+                                filepath = \
+                                    os.path.join(os.path.normpath(catalog),
+                                                 filename)
+                                link[arg] = filepath
         with open(self.file, 'w+', encoding='utf-8') as rewrite_file:
             rewrite_file.write(str(content))
 
