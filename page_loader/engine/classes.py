@@ -4,6 +4,7 @@ from urllib.parse import urljoin, urlparse
 import requests as re
 from bs4 import BeautifulSoup as bs
 from loguru import logger
+from tqdm import tqdm
 
 logger.remove()
 logger.add(os.path.join(os.getcwd(), 'logs', 'debug.json'),
@@ -68,7 +69,7 @@ class File:
     def replace_content(self, source, origin_url, catalog):
         with open(self.file, 'r', encoding='utf-8') as origin:
             content = bs(origin, 'html.parser')
-            for item in source:
+            for item in tqdm(source, desc='Formatting HTML'):
                 tag, arg = item
                 for link in content.find_all(tag):
                     if link.get(arg) is not None:
@@ -135,11 +136,3 @@ class Url:
             with open(filepath, 'wb+') as downloaded_file:
                 for chunk in temp.iter_content(chunk_size=128):
                     downloaded_file.write(chunk)
-
-
-v = Url('https://github.com/Delgan/loguru')
-d = Dir('var')
-f = File('github.com-Delgan-loguru')
-
-# v.download(filename=f.file)
-# f.find_content(LINK, v.url)

@@ -1,5 +1,5 @@
 import os
-
+from tqdm import tqdm
 from loguru import logger
 
 from page_loader.engine.classes import Url, Dir, File
@@ -8,7 +8,7 @@ from page_loader.engine.classes import Url, Dir, File
 def download_content(filepath, path_, source, url):
     sample = File(filepath).find_content(source, url)
     logger.info('List: ' + str(sample))
-    for link in sample:
+    for link in tqdm(sample, desc='Download Files', unit=' kb'):
         Url(link).download(path_)
 
 
@@ -31,9 +31,9 @@ def download(url, path_=os.getcwd()):
     File(filepath).replace_content(File.LIST_, url, path_)
 
 
-url = 'https://github.com/Delgan/loguru'
+#url = 'http://geekcity.ru/dc-ubet-ligu-spravedlivosti/'
 
-download(url, 'var/tmp')
+#download(url, 'directory')
 
 # path_ = 'var/tmp/github.com-Delgan-loguru_files'
 # filepath = 'var/tmp/github.com-Delgan-loguru.html'
