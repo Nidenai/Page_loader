@@ -34,6 +34,7 @@ class File:
         name = name.replace('&', '-')
         name = name.replace(':', '-')
         name = name.replace('.', '-')
+        name = name.replace('-html', '.html')
         if name.startswith('--'):
             name = name.replace('--', '', 1)
         elif name.startswith('-'):
