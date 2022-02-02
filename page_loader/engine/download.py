@@ -31,6 +31,7 @@ def download(url, path_=os.getcwd()):
         for item in args:
             download_content(filepath, catalog, item, url)
         File(filepath).replace_content(File.LIST_, url, path_)
+        return filename
     except Exception:
         raise TypeError('Ошибка')
 
