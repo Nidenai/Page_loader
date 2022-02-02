@@ -32,7 +32,7 @@ def download(url, path_=os.getcwd()):
     File(filepath).replace_content(File.LIST_, url, path_)
     try:
         return filepath
-    except:
+    except Exception:
         raise TypeError('Ошибка')
 
 # url = 'http://geekcity.ru/dc-ubet-ligu-spravedlivosti/'
