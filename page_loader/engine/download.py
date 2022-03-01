@@ -14,28 +14,27 @@ def download_content(filepath, path_, source, url):
 
 
 def download(url, path_=os.getcwd()):
-    logger.remove()
-    logger.add(os.path.join(os.getcwd(), 'logs', 'debug.json'),
-               format="{message}", level="INFO", rotation="10 MB",
-               compression="zip")
-    filename = File(url).create_html_filename()
-    Url(url).download(path_, filename)
-    logger.info('This is filename: ' + str(filename))
-    filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
-    logger.info('This is path: ' + str(filepath))
-    Dir(filepath).create_html_catalog()
-    catalog = os.path.normpath(filepath).replace('.html', '_files')
-    logger.info('This is folder: ' + str(catalog))
-    args = [File.LINK, File.IMG, File.SCRIPT]
-    for item in args:
-        download_content(filepath, catalog, item, url)
-    File(filepath).replace_content(File.LIST_, url, path_)
     try:
-        return filename
+        logger.remove()
+        logger.add(os.path.join(os.getcwd(), 'logs', 'debug.json'),
+                   format="{message}", level="INFO", rotation="10 MB",
+                   compression="zip")
+        filename = File(url).create_html_filename()
+        Url(url).download(path_, filename)
+        logger.info('This is filename: ' + str(filename))
+        filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
+        logger.info('This is path: ' + str(filepath))
+        Dir(filepath).create_html_catalog()
+        catalog = os.path.normpath(filepath).replace('.html', '_files')
+        logger.info('This is folder: ' + str(catalog))
+        args = [File.LINK, File.IMG, File.SCRIPT]
+        for item in args:
+            download_content(filepath, catalog, item, url)
+        File(filepath).replace_content(File.LIST_, url, path_)
+        return filepath
     except Exception:
         raise TypeError('Ошибка')
 
+# url = 'http://geekcity.ru/dc-ubet-ligu-spravedlivosti/'
 
-url = 'http://geekci32ty.ru/dc-ubet-ligu-sprav№31231edlivosti/'
-
-print(download(url, 'directory'))
+# download(url, 'directory')
