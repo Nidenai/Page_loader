@@ -1,4 +1,4 @@
-from page_loader.engine.download import download
+from page_loader.download import download
 from page_loader.cli import function
 
 
