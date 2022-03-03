@@ -105,7 +105,7 @@ def is_path_exist(catalog):
     и создающий его, что бы не было ошибки"""
     path_ = catalog
     if not os.path.exists(path_):
-        os.makedirs(path_)
+        raise TypeError('Путь не существует')
     elif path_ == os.path.join('sys'):
         raise TypeError('Нельзя сюда сохранять')
     elif os.path.exists(path_):
