@@ -21,11 +21,11 @@ def download(url, path_=os.getcwd()):
                    format="{message}", level="INFO", rotation="10 MB",
                    compression="zip")
         filename = functions.create_html_filename(url)
+        functions.download_url(url, path_, filename)
+        logger.info('Resource by <some_url> was downloaded: ' + str(filename))
         filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
         logger.info('Resource by <some_url> was downloaded: ' + str(filepath))
         functions.create_html_catalog(filepath)
-        functions.download_url(url, path_, filename)
-        logger.info('Resource by <some_url> was downloaded: ' + str(filename))
         catalog = os.path.normpath(filepath).replace('.html', '_files')
         logger.info('Resource by <some_url> was downloaded: ' + str(catalog))
         args = LIST_
