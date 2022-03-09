@@ -103,14 +103,12 @@ def replace_content(file, source, origin_url, catalog):
                                 create_filename_for_file(q)
                             filepath = catalog + '/' + filename
                             link[arg] = filepath
-                            print(filepath)
                     else:
                         if urlparse(link.get(arg)).netloc == \
                                 urlparse(origin_url).netloc:
                             filename = \
                                 create_filename_for_file(link.get(arg))
                             filepath = catalog + '/' + filename
-                            print(filepath)
                             link[arg] = filepath
     with open(file, 'w+', encoding='utf-8') as rewrite_file:
         rewrite_file.write(str(content))

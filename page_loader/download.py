@@ -27,11 +27,12 @@ def download(url, path_=os.getcwd()):
         logger.info('Resource by <some_url> was downloaded: ' + str(filepath))
         functions.create_html_catalog(filepath)
         catalog = os.path.normpath(filepath).replace('.html', '_files')
+        catalog_name = os.path.basename(str(catalog))
         logger.info('Resource by <some_url> was downloaded: ' + str(catalog))
         args = LIST_
         for item in args:
             download_content(filepath, catalog, item, url)
-        functions.replace_content(filepath, LIST_, url, path_)
+        functions.replace_content(filepath, LIST_, url, catalog_name)
         return filepath
     except Exception:
         raise TypeError('Ошибка')
