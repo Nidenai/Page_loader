@@ -6,6 +6,8 @@ from bs4 import BeautifulSoup as bs
 from loguru import logger
 from tqdm import tqdm
 
+from page_loader.Constants import REPLACED
+
 logger.remove()
 logger.add(os.path.join(os.getcwd(), 'logs', 'debug.json'),
            format="{message}", level="INFO", rotation="100 MB",
@@ -61,6 +63,30 @@ def find_content(file, source, url):
     return result
 
 
+def create_filename_for_file(name):
+    """Функция создает имя для ресурсов страницы"""
+    name = str(name)
+    filename, file_extension = os.path.splitext(name)
+    for key, value in REPLACED.items():
+        filename = filename.replace(key, value)
+    if filename.startswith('--'):
+        filename = filename.replace('--', '', 1)
+    elif filename.startswith('-'):
+        filename = filename.replace('-', '', 1)
+    else:
+        pass
+    if file_extension == '':
+        result = filename + '.html'
+    else:
+        result = filename + file_extension
+    return result
+
+
+def create_html_catalog_name(catalog):
+    """Функция создает каталог для ресурсов страницы"""
+    return catalog.replace('.html', '_files')
+
+
 def replace_content(file, source, origin_url, catalog):
     """Функция меняет ссылки на локальные ресурсы в веб-странице"""
     with open(file, 'r', encoding='utf-8') as origin:
@@ -74,18 +100,17 @@ def replace_content(file, source, origin_url, catalog):
                         if urlparse(q).netloc == \
                                 urlparse(origin_url).netloc:
                             filename = \
-                                create_filename(q)
-                            filepath = os.path.join(os.path.normpath
-                                                    (catalog), filename)
+                                create_filename_for_file(q)
+                            filepath = catalog + '/' + filename
                             link[arg] = filepath
+                            print(filepath)
                     else:
                         if urlparse(link.get(arg)).netloc == \
                                 urlparse(origin_url).netloc:
                             filename = \
-                                create_filename(link.get(arg))
-                            filepath = \
-                                os.path.join(os.path.normpath(catalog),
-                                             filename)
+                                create_filename_for_file(link.get(arg))
+                            filepath = catalog + '/' + filename
+                            print(filepath)
                             link[arg] = filepath
     with open(file, 'w+', encoding='utf-8') as rewrite_file:
         rewrite_file.write(str(content))
