@@ -110,6 +110,7 @@ def replace_content(file, source, origin_url, catalog):
                                 create_filename_for_file(link.get(arg))
                             filepath = catalog + '/' + filename
                             link[arg] = filepath
+        content = content.prettify()
     with open(file, 'w+', encoding='utf-8') as rewrite_file:
         rewrite_file.write(str(content))
 
