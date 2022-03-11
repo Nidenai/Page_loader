@@ -1,6 +1,7 @@
-from page_loader import download
 import os
 import shutil
+
+from page_loader import download
 
 HTML_FILE = os.path.join(os.getcwd(),
                          'tests', 'fixtures', 'example.html')
@@ -8,6 +9,7 @@ URL = 'https://ru.hexlet.io/courses'
 NAME = 'example.html'
 PATH_FOR_FILE = os.path.join(os.getcwd(), 'tests', 'tmp')
 CATALOG_NAME = 'ru.hexlet.io-courses_files'
+
 
 def create_dir():
     catalog = os.path.join(os.getcwd(), 'tests', 'tmp')
