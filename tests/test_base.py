@@ -9,6 +9,13 @@ NAME = 'example.html'
 PATH_FOR_FILE = os.path.join(os.getcwd(), 'tests', 'tmp')
 CATALOG_NAME = 'ru.hexlet.io-courses_files'
 
+def create_dir():
+    catalog = os.path.join(os.getcwd(), 'tests', 'tmp')
+    if not os.path.exists(catalog):
+        os.mkdir(os.path.join(os.getcwd(), 'tests', 'tmp'))
+    else:
+        pass
+
 
 def clear_():
     if os.path.isfile(os.path.join(PATH_FOR_FILE, NAME)):
@@ -23,6 +30,7 @@ def clear_():
 
 def test_naming():
     clear_()
+    create_dir()
     test_name = os.path.basename(os.path.join(os.getcwd(),
                                               'fixtures',
                                               'example.html'))
@@ -33,6 +41,7 @@ def test_naming():
 
 def test_catalog():
     clear_()
+    create_dir()
     download(URL, PATH_FOR_FILE)
     base_catalog = os.path.basename(os.path.join(os.getcwd(),
                                                  'fixtures',
