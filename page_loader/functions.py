@@ -127,12 +127,11 @@ def create_html_catalog(catalog):
 def is_path_exist(catalog):
     """Функция, проверяющий правильность каталога
     и создающий его, что бы не было ошибки"""
-    path_ = catalog
-    if not os.path.exists(path_):
+    if not os.path.exists(catalog):
         raise TypeError('Путь не существует')
-    elif path_ == os.path.join('sys'):
+    elif catalog == os.path.join('sys'):
         raise TypeError('Нельзя сюда сохранять')
-    elif os.path.exists(path_):
+    elif os.path.exists(catalog):
         pass
 
 

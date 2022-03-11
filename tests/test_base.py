@@ -6,14 +6,16 @@ HTML_FILE = os.path.join(os.getcwd(),
                          'tests', 'fixtures', 'example.html')
 URL = 'https://ru.hexlet.io/courses'
 NAME = 'example.html'
-PATH_FOR_FILE = os.path.join('tests', 'var', 'tmp')
+PATH_FOR_FILE = os.path.join(os.getcwd(), 'tests', 'tmp')
 CATALOG_NAME = 'ru.hexlet.io-courses_files'
 
 
 def clear_():
     if os.path.isfile(os.path.join(PATH_FOR_FILE, NAME)):
         os.remove(os.path.join(PATH_FOR_FILE, NAME))
-    elif os.path.isdir(os.path.join(PATH_FOR_FILE, CATALOG_NAME)):
+    else:
+        pass
+    if os.path.isdir(os.path.join(PATH_FOR_FILE, CATALOG_NAME)):
         shutil.rmtree((os.path.join(PATH_FOR_FILE, CATALOG_NAME)))
     else:
         pass
