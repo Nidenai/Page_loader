@@ -14,26 +14,27 @@ logger.add(os.path.join(os.getcwd(), 'logs', 'debug.json'),
            compression="zip")
 
 
-def create_filename(filename):
+def create_filename(file_name):
     """Создание имени файла для отображения его в каталоге с ресурсом"""
-    name = str(filename)
-    name = name.replace('https://', '')
-    name = name.replace('https://', '')
-    name = name.replace('http://', '')
-    name = name.replace('www.', '')
-    name = name.replace('?', '-')
-    name = name.replace('/', '-')
-    name = name.replace('&', '-')
-    name = name.replace(':', '-')
-    name = name.replace('.', '-')
-    name = name.replace('-html', '.html')
-    if name.startswith('--'):
-        name = name.replace('--', '', 1)
-    elif name.startswith('-'):
-        name = name.replace('-', '', 1)
+    name = str(file_name)
+    filename, file_extension = os.path.splitext(name)
+    for key, value in REPLACED.items():
+        filename = filename.replace(key, value)
+    if filename.startswith('--'):
+        filename = filename.replace('--', '', 1)
+    elif filename.startswith('-'):
+        filename = filename.replace('-', '', 1)
     else:
         pass
-    return name
+    print(filename)
+    if filename.endswith('-'):
+        filename = filename[:-1]
+    else:
+        pass
+    print(filename)
+    result = filename + '.html'
+    print(filename)
+    return result
 
 
 def create_html_filename(name):
@@ -150,7 +151,7 @@ def download_url(url, path_=os.getcwd(), filename=None):
     is_path_exist(path_)
     check_url_response(url)
     if filename is None:
-        filename = create_filename(url)
+        filename = create_filename_for_file(url)
     filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
     with requests.get(url, stream=True) as temp:
         with open(filepath, 'wb+') as downloaded_file:

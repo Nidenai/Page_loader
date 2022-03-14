@@ -20,7 +20,7 @@ def download(url, path_=os.getcwd()):
         logger.add(os.path.join(os.getcwd(), 'engine/logs', 'debug.json'),
                    format="{message}", level="INFO", rotation="10 MB",
                    compression="zip")
-        filename = functions.create_html_filename(url)
+        filename = functions.create_filename(url)
         functions.download_url(url, path_, filename)
         logger.info('Resource by <some_url> was downloaded: ' + str(filename))
         filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
