@@ -31,7 +31,7 @@ def download(url, path_=os.getcwd()):
         for item in args:
             download_content(filepath, catalog, item, url)
         functions.replace_content(filepath, LIST_, url, catalog_name)
-        logger.info(f"Done. You can open saved page from: {filepath}")
+        print(f"Done. You can open saved page from: {filepath}")
         return filepath
     except Exception:
         raise TypeError('Ошибка')
