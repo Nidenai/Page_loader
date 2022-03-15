@@ -3,10 +3,8 @@ import shutil
 
 from page_loader import download
 
-HTML_FILE = os.path.join(os.getcwd(),
-                         'tests', 'fixtures', 'example.html')
 URL = 'https://ru.hexlet.io/courses'
-NAME = 'example.html'
+NAME = 'ru.hexlet.io-courses.html'
 PATH_FOR_FILE = os.path.join(os.getcwd(), 'tests', 'tmp')
 CATALOG_NAME = 'ru.hexlet.io-courses_files'
 
@@ -50,3 +48,14 @@ def test_catalog():
                                                  'ru.hexlet.io-courses_files'))
     catalog = os.path.basename(os.path.join(PATH_FOR_FILE, CATALOG_NAME))
     assert base_catalog == catalog
+
+
+def test_content():
+    clear_()
+    create_dir()
+    download(URL, PATH_FOR_FILE)
+    base_content = open(os.path.join(os.getcwd(),
+                                     'fixtures',
+                                     'ru.hexlet.io-courses.html', 'r'))
+    compare_content = open(os.path.join(PATH_FOR_FILE, NAME), 'r')
+    assert base_content == compare_content

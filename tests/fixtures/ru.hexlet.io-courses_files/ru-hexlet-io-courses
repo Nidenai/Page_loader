@@ -3,7 +3,7 @@
 <head>
 <title>Курсы программирования, обучение онлайн</title>
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="WglenojSTOtNPJRWLesHtru7FUKDI5ZWJUZuJSyEGqFYmpY6Cztk8rJAS1RaxoaWBieB3_Cp9YW0pMrelJVO5Q" />
+<meta name="csrf-token" content="JDhKmYPClsww99mCfluPg0C9bPvl7JgRXh_umL_E3cKTf-CbnpsL_1m_oyW5PFSJcvNPvJo0CPk8kKzkik0yzA" />
 <meta name="csp-nonce" />
 <link rel="icon" type="image/x-icon" href="https://cdn2.hexlet.io/assets/favicon-2c49cf49c44e5388df35976abd2eb9ce820e722edfe2e6604f1fe357e2f940da.ico" />
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
@@ -17,7 +17,7 @@
 
 <script>
 //<![CDATA[
-window.gon={};gon.fired_events={};gon.is_bot=true;gon.applications={};gon.current_user={"id":null,"email":null,"sanitized_phone_number":"","username":null,"created_at":"2022-03-14T13:51:04.321Z","last_viewed_notification_id":null,"paid_days_count":0,"first_name":"","last_name":"","full_name":"","birthday":null,"city":null,"text":" ()","is_guest":true,"is_mentor":false,"is_tutor":false,"is_hexlet_employee":false,"current_company":null,"can_use_paid_features":false,"current_program":null,"is_active_group_member":false};gon.token="xCQg0V2hHElwFp6TLXNBlIgH_4OGvnlS207M_mg6ghPGt-h13kg0UI9qQZFaXsC0NZtrHvU0GoFKrGgF0CvWVw";gon.events=["blog_post_moderation_submitted","code_review_created","company_balance_recounted","company_created","company_updated","course_started","course_finished","exercise_started","lead_created","lesson_started","lesson_finished","lesson_unit_finished","product_payment_paid","program_started","program_finished","project_started","project_check_point_finished","project_sent_to_review","project_finished","registration_failed","show_lead_modal","signed_up","signed_up_program_started","solution_viewed","subscription_cancelled","subscription_deleted","subscription_created","subscription_paid","subscription_price_changed","subscription_product_changed","test","topic_created","topic_comment_created","tutor_assigned","tutorship_application_created","user_email_confirmed","user_email_changed","user_updated"];gon.disqus_name="hexletio";gon.locale="ru";gon.rails_env="production";gon.mobile=false;gon.google={"analytics_key":"UA-1360700-51","optimize_key":"GTM-5QDVFPF"};gon.recaptcha={"site_key_v3":"6LenGbgZAAAAAM7HbrDbn5JlizCSzPcS767c9vaY"};gon.social_signin=false;gon.typoreporter_google_form_id="1FAIpQLSeibfGq-KvWQ2Fyru-zkFFRVTLBuzXAHAoEyN1p49FtDmNoNA";
+window.gon={};gon.fired_events={};gon.is_bot=true;gon.applications={};gon.current_user={"id":null,"email":null,"sanitized_phone_number":"","username":null,"created_at":"2022-03-11T15:31:37.021Z","last_viewed_notification_id":null,"paid_days_count":0,"first_name":"","last_name":"","full_name":"","birthday":null,"city":null,"text":" ()","is_guest":true,"is_mentor":false,"is_tutor":false,"is_hexlet_employee":false,"current_company":null,"can_use_paid_features":false,"current_program":null,"is_active_group_member":false};gon.token="7jpSlYiVNWYochr9G9czxOx7f4XHG5aVSCynGdbjvZxZffiXlcyoVUE6YFrcsOjO3jVcwrjDBn0qo-Vl42pSkg";gon.events=["blog_post_moderation_submitted","code_review_created","company_balance_recounted","company_created","company_updated","course_started","course_finished","exercise_started","lead_created","lesson_started","lesson_finished","lesson_unit_finished","product_payment_paid","program_started","program_finished","project_started","project_check_point_finished","project_sent_to_review","project_finished","registration_failed","show_lead_modal","signed_up","signed_up_program_started","solution_viewed","subscription_cancelled","subscription_deleted","subscription_created","subscription_paid","subscription_price_changed","subscription_product_changed","test","topic_created","topic_comment_created","tutor_assigned","tutorship_application_created","user_email_confirmed","user_email_changed","user_updated"];gon.disqus_name="hexletio";gon.locale="ru";gon.rails_env="production";gon.mobile=false;gon.google={"analytics_key":"UA-1360700-51","optimize_key":"GTM-5QDVFPF"};gon.recaptcha={"site_key_v3":"6LenGbgZAAAAAM7HbrDbn5JlizCSzPcS767c9vaY"};gon.social_signin=false;gon.typoreporter_google_form_id="1FAIpQLSeibfGq-KvWQ2Fyru-zkFFRVTLBuzXAHAoEyN1p49FtDmNoNA";
 //]]>
 </script>
 <script>
@@ -25,7 +25,7 @@ window.gon={};gon.fired_events={};gon.is_bot=true;gon.applications={};gon.curren
     const options = {
       dsn: 'https://5e408926ab534fba9c66d8f620d1f58b@o1090356.ingest.sentry.io/6106229',
       environment: 'production',
-      release: 'v6505',
+      release: 'v6498',
       initialScope: {
         user: gon.current_user
       },
@@ -45,9 +45,9 @@ window.gon={};gon.fired_events={};gon.is_bot=true;gon.applications={};gon.curren
       allowUrls: [/https?:\/\/((cdn|cdn2|ru|en)\.)?hexlet.io/]
     };
     const key = options.dsn.replace('https://', '').split('@')[0];
-
+  
     (function(c,u,v,n,p,e,z,A,w){function k(a){if(!x){x=!0;var l=u.getElementsByTagName(v)[0],d=u.createElement(v);d.src=A;d.crossOrigin="anonymous";d.addEventListener("load",function(){try{c[n]=r;c[p]=t;var b=c[e],d=b.init;b.init=function(a){for(var b in a)Object.prototype.hasOwnProperty.call(a,b)&&(w[b]=a[b]);d(w)};B(a,b)}catch(g){console.error(g)}});l.parentNode.insertBefore(d,l)}}function B(a,l){try{for(var d=m.data,b=0;b<a.length;b++)if("function"===typeof a[b])a[b]();var e=!1,g=c.__SENTRY__;"undefined"!== typeof g&&g.hub&&g.hub.getClient()&&(e=!0);g=!1;for(b=0;b<d.length;b++)if(d[b].f){g=!0;var f=d[b];!1===e&&"init"!==f.f&&l.init();e=!0;l[f.f].apply(l,f.a)}!1===e&&!1===g&&l.init();var h=c[n],k=c[p];for(b=0;b<d.length;b++)d[b].e&&h?h.apply(c,d[b].e):d[b].p&&k&&k.apply(c,[d[b].p])}catch(C){console.error(C)}}for(var f=!0,y=!1,q=0;q<document.scripts.length;q++)if(-1<document.scripts[q].src.indexOf(z)){f="no"!==document.scripts[q].getAttribute("data-lazy");break}var x=!1,h=[],m=function(a){(a.e||a.p||a.f&& -1<a.f.indexOf("capture")||a.f&&-1<a.f.indexOf("showReportDialog"))&&f&&k(h);m.data.push(a)};m.data=[];c[e]=c[e]||{};c[e].onLoad=function(a){h.push(a);f&&!y||k(h)};c[e].forceLoad=function(){y=!0;f&&setTimeout(function(){k(h)})};"init addBreadcrumb captureMessage captureException captureEvent configureScope withScope showReportDialog".split(" ").forEach(function(a){c[e][a]=function(){m({f:a,a:arguments})}});var r=c[n];c[n]=function(a,e,d,b,f){m({e:[].slice.call(arguments)});r&&r.apply(c,arguments)}; var t=c[p];c[p]=function(a){m({p:a.reason});t&&t.apply(c,arguments)};f||setTimeout(function(){k(h)})})(window,document,"script","onerror","onunhandledrejection","Sentry",key,"https://browser.sentry-cdn.com/6.17.4/bundle.min.js",options);
-
+  
   })();
 </script>
 
@@ -57,16 +57,16 @@ window.gon={};gon.fired_events={};gon.is_bot=true;gon.applications={};gon.curren
       if (gon.events.indexOf(eventName) === -1) {
         throw new Error('Undefined event name ' + eventName + '. Check gon.events.');
       }
-
+  
       if (!gon.fired_events.hasOwnProperty(eventName)) {
         return;
       }
       var options = gon.fired_events[eventName];
-
+  
       callback(eventName, options);
     }
   };
-
+  
   // for custom scroll trigger in gtm
   var onceScrollHandler = function () {
     var events = window.dataLayer || [];
@@ -74,7 +74,7 @@ window.gon={};gon.fired_events={};gon.is_bot=true;gon.applications={};gon.curren
     window.removeEventListener('scroll', onceScrollHandler, false);
   };
   window.addEventListener('scroll', onceScrollHandler);
-
+  
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -243,6 +243,39 @@ JavaScript
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-asynchronous-programming">JS: Асинхронное программирование</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>промисы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>event loop</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>обработка ошибок</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>таймеры</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>18 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-react">JS: React</a>
 </h3>
 <span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
@@ -309,6 +342,138 @@ JavaScript
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-functions">JS: Функции</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>деструктуризация</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>функции высшего порядка</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>замыкания</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>чистые функции</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>13 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/frontend-testing-browser">Тестирование фронтенда</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>e2e</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>page object</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>JSDOM</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>testing library</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>8 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-testing">JS: Автоматическое тестирование</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>утверждения</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>jest</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>матчеры</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>юнит-тесты</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>14 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-dom">JS: DOM API</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>полифиллы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>AJAX</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>события</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>селекторы</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>20 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-introduction-to-oop">JS: Введение в ООП</a>
 </h3>
 <span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
@@ -329,6 +494,39 @@ JavaScript
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>14 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-setup-environment">JS: Настройка окружения</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>eslint</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>prettier</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>зависимости</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>npx</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>3 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -441,204 +639,6 @@ JavaScript
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-functions">JS: Функции</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>деструктуризация</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>функции высшего порядка</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>замыкания</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>чистые функции</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>13 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-dom">JS: DOM API</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>полифиллы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>AJAX</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>события</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>селекторы</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>20 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-asynchronous-programming">JS: Асинхронное программирование</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>промисы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>event loop</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>обработка ошибок</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>таймеры</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>18 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/frontend-testing-browser">Тестирование фронтенда</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>e2e</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>page object</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>JSDOM</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>testing library</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>8 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-setup-environment">JS: Настройка окружения</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>eslint</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>prettier</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>зависимости</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>npx</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>3 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-testing">JS: Автоматическое тестирование</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>утверждения</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>jest</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>матчеры</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>юнит-тесты</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>14 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-react-hooks">JS: React Hooks</a>
 </h3>
 <span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
@@ -672,6 +672,135 @@ JavaScript
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-polymorphism">JS: Полиморфизм</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>Динамическая диспетчеризация</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>параметрический полиморфизм</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>полиморфизм подтипов</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>инверсия зависимостей</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>18 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-frontend-architecture">JS: Архитектура фронтенда</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>состояние</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>нормализация данных</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>конечные автоматы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>MVC</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>14 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-advanced-testing">JS: Продвинутое тестирование</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>фикстуры</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>стабы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>моки</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>побочные эффекты</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>12 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-classes">JS: Погружаясь в классы</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>позднее связывание</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>наследование</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>композиция</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>10 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-object-oriented-design">JS: Объектно-ориентированный дизайн</a>
 </h3>
 <span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
@@ -688,39 +817,6 @@ JavaScript
 </div>
 <div class='col'>
 <div class='badge bg-light text-muted d-block text-truncate'>embedded objects</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-ddd">JS: Предметно-ориентированное проектирование</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>сущности</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>сервисы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>репозитории</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>валидация</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
@@ -768,26 +864,59 @@ JavaScript
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-polymorphism">JS: Полиморфизм</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-trees">JS: Деревья</a>
 </h3>
 <span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>Динамическая диспетчеризация</div>
+<div class='badge bg-light text-muted d-block text-truncate'>рекурсивные структуры данных</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>параметрический полиморфизм</div>
+<div class='badge bg-light text-muted d-block text-truncate'>обход в глубину</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>полиморфизм подтипов</div>
+<div class='badge bg-light text-muted d-block text-truncate'>древовидная рекурсия</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>инверсия зависимостей</div>
+<div class='badge bg-light text-muted d-block text-truncate'>файловая система</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>18 часов</div>
+<div class='text-muted small'>10 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-ddd">JS: Предметно-ориентированное проектирование</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>сущности</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>сервисы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>репозитории</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>валидация</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>9 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -831,135 +960,6 @@ JavaScript
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-classes">JS: Погружаясь в классы</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>позднее связывание</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>наследование</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>композиция</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>10 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-advanced-testing">JS: Продвинутое тестирование</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>фикстуры</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>стабы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>моки</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>побочные эффекты</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>12 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-trees">JS: Деревья</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>рекурсивные структуры данных</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>обход в глубину</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>древовидная рекурсия</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>файловая система</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>10 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-frontend-architecture">JS: Архитектура фронтенда</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>состояние</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>нормализация данных</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>конечные автоматы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>MVC</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>14 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/programming-basics">Основы программирования</a>
 </h3>
 <span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
@@ -980,156 +980,6 @@ JavaScript
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>23 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/compound_data">JS: Составные данные</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>моделирование данных</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>барьеры абстракции</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>замыкание</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-functions-hard-way">JS: Функциональное программирование</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>guard expression</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>основы функционального программирования</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>выражения и инструкции</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>12 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js_async">JS: Разработка абстракций для асинхронности</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ад колбеков</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>event loop</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-abp">JS: Автоматное программирование</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>сложность</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>лексер</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>конечные автоматы</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>3 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-sync">JS: Синхронная асинхронность</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>HTTP</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>промисы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>корутины</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>генераторы</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>11 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -1206,6 +1056,63 @@ JavaScript
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-abp">JS: Автоматное программирование</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>сложность</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>лексер</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>конечные автоматы</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>3 часа</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js_async">JS: Разработка абстракций для асинхронности</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>ад колбеков</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>event loop</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>9 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js_collections">JS: Коллекции</a>
 </h3>
 <span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
@@ -1239,6 +1146,36 @@ JavaScript
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/compound_data">JS: Составные данные</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>моделирование данных</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>барьеры абстракции</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>замыкание</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>9 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-basic-algorithms">Основы алгоритмов и структур данных</a>
 </h3>
 <span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
@@ -1259,36 +1196,6 @@ JavaScript
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>11 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js_prototypes">JS: Прототипы</a>
-</h3>
-<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>полиморфизм</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>наследование</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>позднее связывание</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>12 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -1355,6 +1262,99 @@ JavaScript
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>11 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-functions-hard-way">JS: Функциональное программирование</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>guard expression</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>основы функционального программирования</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>выражения и инструкции</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>12 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js-sync">JS: Синхронная асинхронность</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>HTTP</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>промисы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>корутины</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>генераторы</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>11 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/js_prototypes">JS: Прототипы</a>
+</h3>
+<span class='fa-3x fab fa-js-square' style='color: #f1e05a'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>полиморфизм</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>наследование</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>позднее связывание</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>12 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -1455,39 +1455,6 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-mvc">Веб-разработка на PHP</a>
-</h3>
-<span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CGI</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>slim framework</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>шаблонизация</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>отправка форм</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>24 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-laravel">PHP: Разработка на Laravel</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
@@ -1521,14 +1488,26 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-orm-eloquent">PHP: Eloquent (ORM)</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-mvc">Веб-разработка на PHP</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>CGI</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>slim framework</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>шаблонизация</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>отправка форм</div>
+</div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>10 часов</div>
+<div class='text-muted small'>24 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -1542,26 +1521,23 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-arrays">PHP: Массивы</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-setup-environment">PHP: Настройка окружения</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>синтаксис</div>
+<div class='badge bg-light text-muted d-block text-truncate'>зависимости</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>вложенные массивы</div>
+<div class='badge bg-light text-muted d-block text-truncate'>composer</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>алгоритмическая сложность</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>сортировка</div>
+<div class='badge bg-light text-muted d-block text-truncate'>автозагрузка</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>25 часов</div>
+<div class='text-muted small'>3 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -1608,23 +1584,47 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-setup-environment">PHP: Настройка окружения</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-arrays">PHP: Массивы</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>зависимости</div>
+<div class='badge bg-light text-muted d-block text-truncate'>синтаксис</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>composer</div>
+<div class='badge bg-light text-muted d-block text-truncate'>вложенные массивы</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>автозагрузка</div>
+<div class='badge bg-light text-muted d-block text-truncate'>алгоритмическая сложность</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>сортировка</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>3 часа</div>
+<div class='text-muted small'>25 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-orm-eloquent">PHP: Eloquent (ORM)</a>
+</h3>
+<span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>10 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -1671,23 +1671,26 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-data-abstraction">PHP: Абстракция с помощью данных</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-trees">PHP: Деревья</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ER-модель</div>
+<div class='badge bg-light text-muted d-block text-truncate'>рекурсивные структуры данных</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>DDD</div>
+<div class='badge bg-light text-muted d-block text-truncate'>обход в глубину</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>интерфейс</div>
+<div class='badge bg-light text-muted d-block text-truncate'>древовидная рекурсия</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>файловая система</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
+<div class='text-muted small'>10 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -1734,22 +1737,85 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-trees">PHP: Деревья</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-data-abstraction">PHP: Абстракция с помощью данных</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>рекурсивные структуры данных</div>
+<div class='badge bg-light text-muted d-block text-truncate'>ER-модель</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>обход в глубину</div>
+<div class='badge bg-light text-muted d-block text-truncate'>DDD</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>древовидная рекурсия</div>
+<div class='badge bg-light text-muted d-block text-truncate'>интерфейс</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>9 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-object-oriented-design">PHP: Объектно-ориентированный дизайн</a>
+</h3>
+<span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>collect</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>файловая система</div>
+<div class='badge bg-light text-muted d-block text-truncate'>PHPUnit</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>паттерны</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>текучий интерфейс</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>14 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-advanced-testing">PHP: Продвинутое тестирование</a>
+</h3>
+<span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>фикстуры</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>стабы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>моки</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>побочные эффекты</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
@@ -1830,119 +1896,26 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-object-oriented-design">PHP: Объектно-ориентированный дизайн</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-web">PHP: Разработка микрофреймворка</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>collect</div>
+<div class='badge bg-light text-muted d-block text-truncate'>сервер</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>PHPUnit</div>
+<div class='badge bg-light text-muted d-block text-truncate'>роутинг</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>паттерны</div>
+<div class='badge bg-light text-muted d-block text-truncate'>MVC</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>текучий интерфейс</div>
+<div class='badge bg-light text-muted d-block text-truncate'>HTTP</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>14 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-advanced-testing">PHP: Продвинутое тестирование</a>
-</h3>
-<span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>фикстуры</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>стабы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>моки</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>побочные эффекты</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>10 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php_sequences">PHP: Последовательности</a>
-</h3>
-<span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>функции высшего порядка</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>стандартные интерфейсы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>уровневое проектирование</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>11 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-io">PHP: Ввод и вывод</a>
-</h3>
-<span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>дескрипторы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>магические константы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>итераторы</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>8 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -1989,22 +1962,19 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-pdo">PHP PDO: Работа с базой данных</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-io">PHP: Ввод и вывод</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>PDO</div>
+<div class='badge bg-light text-muted d-block text-truncate'>дескрипторы</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>query builder</div>
+<div class='badge bg-light text-muted d-block text-truncate'>магические константы</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>подготовленные запросы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>квотирование</div>
+<div class='badge bg-light text-muted d-block text-truncate'>итераторы</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
@@ -2022,23 +1992,56 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-compound-data">PHP: Составные данные</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-sicp">PHP: Построение абстракций</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>моделирование данных</div>
+<div class='badge bg-light text-muted d-block text-truncate'>рекурсия</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>барьеры абстракции</div>
+<div class='badge bg-light text-muted d-block text-truncate'>функции высшего порядка</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>замыкание</div>
+<div class='badge bg-light text-muted d-block text-truncate'>интерфейсы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>присваивание</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
+<div class='text-muted small'>25 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php_sequences">PHP: Последовательности</a>
+</h3>
+<span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>функции высшего порядка</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>стандартные интерфейсы</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>уровневое проектирование</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>11 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -2085,26 +2088,23 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-web">PHP: Разработка микрофреймворка</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-compound-data">PHP: Составные данные</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>сервер</div>
+<div class='badge bg-light text-muted d-block text-truncate'>моделирование данных</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>роутинг</div>
+<div class='badge bg-light text-muted d-block text-truncate'>барьеры абстракции</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>MVC</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>HTTP</div>
+<div class='badge bg-light text-muted d-block text-truncate'>замыкание</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>14 часов</div>
+<div class='text-muted small'>9 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -2118,26 +2118,26 @@ PHP
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-sicp">PHP: Построение абстракций</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/php-pdo">PHP PDO: Работа с базой данных</a>
 </h3>
 <span class='fa-3x fab fa-php' style='color: #4F5D95'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>рекурсия</div>
+<div class='badge bg-light text-muted d-block text-truncate'>PDO</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>функции высшего порядка</div>
+<div class='badge bg-light text-muted d-block text-truncate'>query builder</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>интерфейсы</div>
+<div class='badge bg-light text-muted d-block text-truncate'>подготовленные запросы</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>присваивание</div>
+<div class='badge bg-light text-muted d-block text-truncate'>квотирование</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>25 часов</div>
+<div class='text-muted small'>8 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -2241,39 +2241,6 @@ Python
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-web-development">Ключевые аспекты веб-разработки на Python</a>
-</h3>
-<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>HTTP</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>фреймворки</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ORM</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>тестирование</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>3 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-lists">Python: Списки</a>
 </h3>
 <span class='fa-3x fab fa-python' style='color: #3572A5'></span>
@@ -2307,6 +2274,39 @@ Python
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-flask">Python: Веб-разработка (Flask)</a>
+</h3>
+<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>маршрутизация</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>шаблонизация</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>request</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>WSGI</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>9 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-testing">Python: Автоматическое тестирование</a>
 </h3>
 <span class='fa-3x fab fa-python' style='color: #3572A5'></span>
@@ -2327,6 +2327,39 @@ Python
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>12 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-web-development">Ключевые аспекты веб-разработки на Python</a>
+</h3>
+<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>HTTP</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>фреймворки</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>ORM</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>тестирование</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>3 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -2499,39 +2532,6 @@ Python
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-flask">Python: Веб-разработка (Flask)</a>
-</h3>
-<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>маршрутизация</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>шаблонизация</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>request</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>WSGI</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-development-course">Ключевые аспекты разработки на Python</a>
 </h3>
 <span class='fa-3x fab fa-python' style='color: #3572A5'></span>
@@ -2552,99 +2552,6 @@ Python
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>2 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-io">Python: Основы текстового ввода-вывода</a>
-</h3>
-<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>файловый дескриптор</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>менеджер контекста</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>потоковая обработка</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>2 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-advanced-testing">Python: Продвинутое тестирование</a>
-</h3>
-<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>фикстуры</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>стабы</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>моки</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>побочные эффекты</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>10 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-data-abstraction">Python: Абстракция с помощью данных</a>
-</h3>
-<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ER-модель</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>DDD</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>интерфейс</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -2691,23 +2598,86 @@ Python
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-declarative-programming">Python: Декларативное программирование</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-advanced-testing">Python: Продвинутое тестирование</a>
 </h3>
 <span class='fa-3x fab fa-python' style='color: #3572A5'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>declarative</div>
+<div class='badge bg-light text-muted d-block text-truncate'>фикстуры</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>comprehensions</div>
+<div class='badge bg-light text-muted d-block text-truncate'>стабы</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>generators</div>
+<div class='badge bg-light text-muted d-block text-truncate'>моки</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>побочные эффекты</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>8 часов</div>
+<div class='text-muted small'>10 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-io">Python: Основы текстового ввода-вывода</a>
+</h3>
+<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>файловый дескриптор</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>менеджер контекста</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>потоковая обработка</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>2 часа</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-data-abstraction">Python: Абстракция с помощью данных</a>
+</h3>
+<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>ER-модель</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>DDD</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>интерфейс</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>9 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -2746,6 +2716,36 @@ Python
 </div>
 
 </div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/python-declarative-programming">Python: Декларативное программирование</a>
+</h3>
+<span class='fa-3x fab fa-python' style='color: #3572A5'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>declarative</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>comprehensions</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>generators</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>8 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
 </div>
 </section>
 
@@ -2775,13 +2775,16 @@ HTML и CSS (верстка)
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/bootstrap_basic">Bootstrap 5: Основы верстки</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/css-positioning">CSS: Позиционирование элементов</a>
 </h3>
 <span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>HTML</div>
+<div class='badge bg-light text-muted d-block text-truncate'>позиционирование</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>HTML-элементы</div>
 </div>
 <div class='col'>
 <div class='badge bg-light text-muted d-block text-truncate'>CSS3</div>
@@ -2789,12 +2792,9 @@ HTML и CSS (верстка)
 <div class='col'>
 <div class='badge bg-light text-muted d-block text-truncate'>вёрстка</div>
 </div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CSS адаптивность</div>
-</div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>10 часов</div>
+<div class='text-muted small'>9 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -2828,6 +2828,72 @@ HTML и CSS (верстка)
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>16 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/css-flex">CSS: Основы Flex</a>
+</h3>
+<span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>CSS3</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>вёрстка</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>CSS Flex</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>CSS адаптивность</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>10 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/css-grid">CSS: Вёрстка на Grid</a>
+</h3>
+<span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>CSS3</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>Сетки</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>вёрстка</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>CSS Grid</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>6 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -2973,16 +3039,13 @@ HTML и CSS (верстка)
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/css-positioning">CSS: Позиционирование элементов</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/bootstrap_basic">Bootstrap 5: Основы верстки</a>
 </h3>
 <span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>позиционирование</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>HTML-элементы</div>
+<div class='badge bg-light text-muted d-block text-truncate'>HTML</div>
 </div>
 <div class='col'>
 <div class='badge bg-light text-muted d-block text-truncate'>CSS3</div>
@@ -2990,9 +3053,12 @@ HTML и CSS (верстка)
 <div class='col'>
 <div class='badge bg-light text-muted d-block text-truncate'>вёрстка</div>
 </div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>CSS адаптивность</div>
+</div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
+<div class='text-muted small'>10 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -3026,72 +3092,6 @@ HTML и CSS (верстка)
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>9 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/css-flex">CSS: Основы Flex</a>
-</h3>
-<span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CSS3</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>вёрстка</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CSS Flex</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CSS адаптивность</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>10 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/css-grid">CSS: Вёрстка на Grid</a>
-</h3>
-<span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CSS3</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>Сетки</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>вёрстка</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CSS Grid</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>6 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -3171,39 +3171,6 @@ HTML и CSS (верстка)
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/intro_to_web_development">Введение в веб-разработку</a>
-</h3>
-<span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>HTML</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CSS</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>DNS</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>протоколы сетевые и транспортные</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>3 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/html">Основы HTML, CSS и веб-дизайна</a>
 </h3>
 <span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
@@ -3224,6 +3191,39 @@ HTML и CSS (верстка)
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>5 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/intro_to_web_development">Введение в веб-разработку</a>
+</h3>
+<span class='fa-3x fab fa-html5' style='color: #e34c26'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>HTML</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>CSS</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>DNS</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>протоколы сетевые и транспортные</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>3 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -3315,6 +3315,39 @@ Java
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-advanced">Java: Продвинутое использование</a>
+</h3>
+<span class='fa-3x fab fa-java' style='color: #b07219'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>multithreading</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>asynchrony</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>webflux</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>docker</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>2 часа</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-spring">Java: Корпоративные приложения на Spring Boot</a>
 </h3>
 <span class='fa-3x fab fa-java' style='color: #b07219'></span>
@@ -3348,26 +3381,26 @@ Java
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-collections">Java: Коллекции</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-setup-environment">Java: Настройка окружения</a>
 </h3>
 <span class='fa-3x fab fa-java' style='color: #b07219'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>алгоритмы</div>
+<div class='badge bg-light text-muted d-block text-truncate'>зависимости</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>Структуры данных</div>
+<div class='badge bg-light text-muted d-block text-truncate'>IDEA</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>тесты</div>
+<div class='badge bg-light text-muted d-block text-truncate'>Gradle</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>дженерики</div>
+<div class='badge bg-light text-muted d-block text-truncate'>JDK</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>2 часа</div>
+<div class='text-muted small'>3 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -3435,22 +3468,22 @@ Java
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-advanced">Java: Продвинутое использование</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-collections">Java: Коллекции</a>
 </h3>
 <span class='fa-3x fab fa-java' style='color: #b07219'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>multithreading</div>
+<div class='badge bg-light text-muted d-block text-truncate'>алгоритмы</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>asynchrony</div>
+<div class='badge bg-light text-muted d-block text-truncate'>Структуры данных</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>webflux</div>
+<div class='badge bg-light text-muted d-block text-truncate'>тесты</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>docker</div>
+<div class='badge bg-light text-muted d-block text-truncate'>дженерики</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
@@ -3534,26 +3567,23 @@ Java
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-setup-environment">Java: Настройка окружения</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-compound-data">Java: Составные данные</a>
 </h3>
 <span class='fa-3x fab fa-java' style='color: #b07219'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>зависимости</div>
+<div class='badge bg-light text-muted d-block text-truncate'>моделирование данных</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>IDEA</div>
+<div class='badge bg-light text-muted d-block text-truncate'>барьеры абстракции</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>Gradle</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>JDK</div>
+<div class='badge bg-light text-muted d-block text-truncate'>замыкание</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>3 часа</div>
+<div class='text-muted small'>9 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -3595,36 +3625,6 @@ Java
 </div>
 
 </div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/java-compound-data">Java: Составные данные</a>
-</h3>
-<span class='fa-3x fab fa-java' style='color: #b07219'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>моделирование данных</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>барьеры абстракции</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>замыкание</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>9 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
 </div>
 </section>
 
@@ -3654,22 +3654,43 @@ Java
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/rails-full">Ruby: Полный Rails</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/ruby-setup-environment">Ruby: Настройка окружения</a>
+</h3>
+<span class='fa-3x fas fa-gem' style='color: #701516'></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>2 часа</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/ruby-basics">Ruby: Основы языка</a>
 </h3>
 <span class='fa-3x fas fa-gem' style='color: #701516'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ruby on rails</div>
+<div class='badge bg-light text-muted d-block text-truncate'>ruby</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ActiveJob</div>
+<div class='badge bg-light text-muted d-block text-truncate'>rubygems</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>rest api</div>
+<div class='badge bg-light text-muted d-block text-truncate'>testing</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>Webmock</div>
+<div class='badge bg-light text-muted d-block text-truncate'>metaprogramming</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
@@ -3753,43 +3774,22 @@ Java
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/ruby-setup-environment">Ruby: Настройка окружения</a>
-</h3>
-<span class='fa-3x fas fa-gem' style='color: #701516'></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>2 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/ruby-basics">Ruby: Основы языка</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/rails-full">Ruby: Полный Rails</a>
 </h3>
 <span class='fa-3x fas fa-gem' style='color: #701516'></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ruby</div>
+<div class='badge bg-light text-muted d-block text-truncate'>ruby on rails</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>rubygems</div>
+<div class='badge bg-light text-muted d-block text-truncate'>ActiveJob</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>testing</div>
+<div class='badge bg-light text-muted d-block text-truncate'>rest api</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>metaprogramming</div>
+<div class='badge bg-light text-muted d-block text-truncate'>Webmock</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
@@ -4180,26 +4180,26 @@ SQL
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/linux-users">Linux: Пользователи</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/vagrant-basics">Vagrant: Основы</a>
 </h3>
 <span class='fa-3x fal fa-terminal' style='color: '></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>chmod</div>
+<div class='badge bg-light text-muted d-block text-truncate'>vagrant</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>root</div>
+<div class='badge bg-light text-muted d-block text-truncate'>virtualbox</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>sudo</div>
+<div class='badge bg-light text-muted d-block text-truncate'>boxes</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>passwd</div>
+<div class='badge bg-light text-muted d-block text-truncate'>virtualization</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>4 часа</div>
+<div class='text-muted small'>3 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -4240,26 +4240,23 @@ SQL
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/vagrant-basics">Vagrant: Основы</a>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/github-actions">Непрерывная интеграция (CI)</a>
 </h3>
 <span class='fa-3x fal fa-terminal' style='color: '></span>
 </div>
 <div class='row row-cols-auto g-1 mb-5'>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>vagrant</div>
+<div class='badge bg-light text-muted d-block text-truncate'>CI</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>virtualbox</div>
+<div class='badge bg-light text-muted d-block text-truncate'>GitHub Actions</div>
 </div>
 <div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>boxes</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>virtualization</div>
+<div class='badge bg-light text-muted d-block text-truncate'>Workflows</div>
 </div>
 </div>
 <div class='mt-auto d-flex'>
-<div class='text-muted small'>3 часа</div>
+<div class='text-muted small'>2 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -4306,36 +4303,6 @@ SQL
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/github-actions">Непрерывная интеграция (CI)</a>
-</h3>
-<span class='fa-3x fal fa-terminal' style='color: '></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>CI</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>GitHub Actions</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>Workflows</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>2 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/redis-basics">Основы Redis</a>
 </h3>
 <span class='fa-3x fal fa-terminal' style='color: '></span>
@@ -4356,6 +4323,39 @@ SQL
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>13 часов</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/linux-users">Linux: Пользователи</a>
+</h3>
+<span class='fa-3x fal fa-terminal' style='color: '></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>chmod</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>root</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>sudo</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>passwd</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>4 часа</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>
@@ -4509,105 +4509,6 @@ SQL
 <div class='card-body d-flex flex-column'>
 <div class='d-flex justify-content-between mt-2 mb-3'>
 <h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/logic">Введение в математическую логику</a>
-</h3>
-<span class='fa-3x fal fa-code' style='color: '></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>логические высказывания</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>таблица истинности</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>нормальная форма</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>предикаты</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>2 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/introduction_to_c">Введение в C (Си)</a>
-</h3>
-<span class='fa-3x fal fa-code' style='color: '></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>первая программа</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>компиляция</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>типы данных</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>переменные</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>10 часов</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
-<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/operating_systems">Операционные системы</a>
-</h3>
-<span class='fa-3x fal fa-code' style='color: '></span>
-</div>
-<div class='row row-cols-auto g-1 mb-5'>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>компьютер</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ОС</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>ядро</div>
-</div>
-<div class='col'>
-<div class='badge bg-light text-muted d-block text-truncate'>процессы</div>
-</div>
-</div>
-<div class='mt-auto d-flex'>
-<div class='text-muted small'>4 часа</div>
-<div class='ms-auto small'>
-Посмотреть
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div class='col mb-4 mb-md-5'>
-<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
-<div class='card-body d-flex flex-column'>
-<div class='d-flex justify-content-between mt-2 mb-3'>
-<h3 class='h5 me-3 mb-0 align-self-center'>
 <a class="text-decoration-none link-dark stretched-link text-break" href="/courses/sicp">Структура и интерпретация компьютерных программ</a>
 </h3>
 <span class='fa-3x fal fa-code' style='color: '></span>
@@ -4661,6 +4562,105 @@ SQL
 </div>
 <div class='mt-auto d-flex'>
 <div class='text-muted small'>3 часа</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/operating_systems">Операционные системы</a>
+</h3>
+<span class='fa-3x fal fa-code' style='color: '></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>компьютер</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>ОС</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>ядро</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>процессы</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>4 часа</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/logic">Введение в математическую логику</a>
+</h3>
+<span class='fa-3x fal fa-code' style='color: '></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>логические высказывания</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>таблица истинности</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>нормальная форма</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>предикаты</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>2 часа</div>
+<div class='ms-auto small'>
+Посмотреть
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4 mb-md-5'>
+<div class='card shadow-sm x-shadow-fade-in h-100 overflow-hidden'>
+<div class='card-body d-flex flex-column'>
+<div class='d-flex justify-content-between mt-2 mb-3'>
+<h3 class='h5 me-3 mb-0 align-self-center'>
+<a class="text-decoration-none link-dark stretched-link text-break" href="/courses/introduction_to_c">Введение в C (Си)</a>
+</h3>
+<span class='fa-3x fal fa-code' style='color: '></span>
+</div>
+<div class='row row-cols-auto g-1 mb-5'>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>первая программа</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>компиляция</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>типы данных</div>
+</div>
+<div class='col'>
+<div class='badge bg-light text-muted d-block text-truncate'>переменные</div>
+</div>
+</div>
+<div class='mt-auto d-flex'>
+<div class='text-muted small'>10 часов</div>
 <div class='ms-auto small'>
 Посмотреть
 </div>

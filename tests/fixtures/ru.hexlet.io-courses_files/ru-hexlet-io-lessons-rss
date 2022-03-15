@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Новые уроки на Хекслете</title>
+    <description>Практические уроки по программированию</description>
+    <link>https://ru.hexlet.io/</link>
+    <webMaster>info@hexlet.io</webMaster>
+    <item>
+      <title>Где и как искать работу в IT? / Трудоустройство</title>
+      <guid isPermaLink="false">1936</guid>
+      <link>https://ru.hexlet.io/courses/employment/lessons/how-to-find-vacancies/theory_unit</link>
+      <description>Цель: Разобраться с каналами поиска вакансий</description>
+      <pubDate>Mon, 14 Mar 2022 10:14:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Горизонтальное масштабирование / Продакшен и Деплой</title>
+      <guid isPermaLink="false">2403</guid>
+      <link>https://ru.hexlet.io/courses/production-basics/lessons/horizontal-scaling/theory_unit</link>
+      <description>Цель: Познакомиться с балансировкой нагрузки и научиться деплоить на несколько серверов сразу</description>
+      <pubDate>Sun, 13 Mar 2022 22:31:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>Прокси-сервер (Caddy) / Продакшен и Деплой</title>
+      <guid isPermaLink="false">2414</guid>
+      <link>https://ru.hexlet.io/courses/production-basics/lessons/web-server/theory_unit</link>
+      <description>Цель: Разобраться в том зачем он нужен и как его подключить</description>
+      <pubDate>Thu, 10 Mar 2022 23:19:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>Фон / Основы вёрстки контента</title>
+      <guid isPermaLink="false">2395</guid>
+      <link>https://ru.hexlet.io/courses/css-content/lessons/background/theory_unit</link>
+      <description>Цель: Изучить возможности по установке и управлению фоном на странице с использованием свойства background. Научиться позиционировать фоновые изображения и настраивать их поведение</description>
+      <pubDate>Wed, 09 Mar 2022 10:10:50 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
