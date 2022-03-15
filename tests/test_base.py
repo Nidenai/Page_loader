@@ -33,7 +33,7 @@ def test_naming():
     create_dir()
     test_name = os.path.basename(os.path.join(os.getcwd(),
                                               'fixtures',
-                                              'example.html'))
+                                              'ru.hexlet.io-courses.html'))
     download(URL, PATH_FOR_FILE)
     name = os.path.basename(os.path.join(PATH_FOR_FILE, NAME))
     assert name == test_name
