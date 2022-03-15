@@ -39,7 +39,7 @@ def test_naming():
     assert name == test_name
 
 
-def test_catalog():
+def astest_catalog():
     clear_()
     create_dir()
     download(URL, PATH_FOR_FILE)
@@ -50,7 +50,7 @@ def test_catalog():
     assert base_catalog == catalog
 
 
-def test_content():
+def astest_content():
     clear_()
     create_dir()
     download(URL, PATH_FOR_FILE)
