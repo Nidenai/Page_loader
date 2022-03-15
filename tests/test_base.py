@@ -55,8 +55,8 @@ def test_content():
     create_dir()
     download(URL, PATH_FOR_FILE)
     b = open(os.path.join(os.getcwd(), 'tests',
-                                     'fixtures',
-                                     'ru.hexlet.io-courses.html'), 'r')
+                          'fixtures',
+                          'ru.hexlet.io-courses.html'), 'r')
     base_content = b.read()
     c = open(os.path.join(PATH_FOR_FILE, NAME), 'r')
     compare_content = c.read()
