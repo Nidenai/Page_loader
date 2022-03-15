@@ -54,8 +54,10 @@ def test_content():
     clear_()
     create_dir()
     download(URL, PATH_FOR_FILE)
-    base_content = open(os.path.join(os.getcwd(), 'tests',
+    b = open(os.path.join(os.getcwd(), 'tests',
                                      'fixtures',
                                      'ru.hexlet.io-courses.html'), 'r')
-    compare_content = open(os.path.join(PATH_FOR_FILE, NAME), 'r')
+    base_content = b.read()
+    c = open(os.path.join(PATH_FOR_FILE, NAME), 'r')
+    compare_content = c.read()
     assert base_content == compare_content
