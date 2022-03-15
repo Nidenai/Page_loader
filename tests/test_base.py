@@ -58,6 +58,8 @@ def test_content():
                           'fixtures',
                           'ru.hexlet.io-courses.html'), 'r')
     base_content = b.read()
-    c = open(os.path.join(PATH_FOR_FILE, NAME), 'r')
+    c = open(os.path.join(os.getcwd(), 'tests',
+                          'tmp',
+                          'ru.hexlet.io-courses.html', NAME), 'r')
     compare_content = c.read()
     assert base_content == compare_content
