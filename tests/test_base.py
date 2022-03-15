@@ -31,7 +31,7 @@ def clear_():
 def test_naming():
     clear_()
     create_dir()
-    test_name = os.path.basename(os.path.join(os.getcwd(),
+    test_name = os.path.basename(os.path.join(os.getcwd(), 'tests',
                                               'fixtures',
                                               'ru.hexlet.io-courses.html'))
     download(URL, PATH_FOR_FILE)
@@ -43,7 +43,7 @@ def test_catalog():
     clear_()
     create_dir()
     download(URL, PATH_FOR_FILE)
-    base_catalog = os.path.basename(os.path.join(os.getcwd(),
+    base_catalog = os.path.basename(os.path.join(os.getcwd(), 'tests',
                                                  'fixtures',
                                                  'ru.hexlet.io-courses_files'))
     catalog = os.path.basename(os.path.join(PATH_FOR_FILE, CATALOG_NAME))
@@ -54,7 +54,7 @@ def test_content():
     clear_()
     create_dir()
     download(URL, PATH_FOR_FILE)
-    base_content = open(os.path.join(os.getcwd(),
+    base_content = open(os.path.join(os.getcwd(), 'tests',
                                      'fixtures',
                                      'ru.hexlet.io-courses.html'), 'r')
     compare_content = open(os.path.join(PATH_FOR_FILE, NAME), 'r')
