@@ -26,14 +26,11 @@ def create_filename(file_name):
         filename = filename.replace('-', '', 1)
     else:
         pass
-    print(filename)
     if filename.endswith('-'):
         filename = filename[:-1]
     else:
         pass
-    print(filename)
     result = filename + '.html'
-    print(filename)
     return result
 
 

@@ -1,5 +1,5 @@
-from page_loader.download import download
 from page_loader.cli import function
+from page_loader.download import download
 
 
 def main():
