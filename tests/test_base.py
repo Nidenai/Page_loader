@@ -56,6 +56,6 @@ def test_content():
     download(URL, PATH_FOR_FILE)
     base_content = open(os.path.join(os.getcwd(),
                                      'fixtures',
-                                     'ru.hexlet.io-courses.html', 'r'))
+                                     'ru.hexlet.io-courses.html'), 'r')
     compare_content = open(os.path.join(PATH_FOR_FILE, NAME), 'r')
     assert base_content == compare_content
