@@ -57,10 +57,13 @@ def download(url, path_=os.getcwd()):
         create_html_catalog(filepath)
         catalog = os.path.normpath(filepath).replace('.html', '_files')
         catalog_name = os.path.basename(str(catalog))
-        args = LIST_
-        for item in args:
-            download_content(filepath, catalog, item, url)
+        downloaded_list = []
+        for item in tqdm(LIST_, desc='Getting resourses'):
+            sample = find_content(filepath, item, url)
+            downloaded_list = downloaded_list + sample
         replace_content(filepath, LIST_, url, catalog_name)
+        for link in tqdm(downloaded_list, desc='Download Files', unit=' kb'):
+            download_url(link, catalog)
         print(f"Done. You can open saved page from: {filepath}")
         return filepath
     except Exception:
