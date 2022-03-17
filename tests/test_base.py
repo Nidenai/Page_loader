@@ -50,7 +50,7 @@ def test_catalog():
     assert base_catalog == catalog
 
 
-def test_content():
+def asdtest_content():
     clear_()
     create_dir()
     download(URL, PATH_FOR_FILE)
