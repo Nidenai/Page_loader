@@ -14,9 +14,7 @@ LINK = ('link', 'href')
 LIST_ = [IMG, SCRIPT, LINK]
 
 logger.remove()
-logger.add(os.path.join(os.getcwd(), 'logs', 'log.txt'),
-           format="{message}", level="INFO", rotation="10 MB",
-           compression="zip")
+logger.add(sys.stdout, format="{message}", level="INFO")
 
 
 def create_html_catalog(catalog):
@@ -42,7 +40,6 @@ def download_url(url, path_=os.getcwd(), filename=None):
                 downloaded_file.write(chunk)
 
 
-@logger.catch
 def download(url, path_=os.getcwd()):
     try:
         filename = create_filename_for_file(url)
@@ -59,7 +56,7 @@ def download(url, path_=os.getcwd()):
         replace_content(filepath, LIST_, url, catalog_name)
         for link in tqdm(downloaded_list, desc='Download Files', unit=' kb'):
             download_url(link, catalog)
-        print(f"Done. You can open saved page from: {filepath}")
+        logger.info(f"Done. You can open saved page from: {filepath}")
         return filepath
     except Exception:
         raise TypeError('Ошибка')
