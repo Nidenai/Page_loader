@@ -1,5 +1,4 @@
 import os
-import sys
 
 import requests
 from loguru import logger
@@ -15,7 +14,9 @@ LINK = ('link', 'href')
 LIST_ = [IMG, SCRIPT, LINK]
 
 logger.remove()
-logger.add(sys.stdout, format="{message}", level="INFO")
+logger.add(os.path.join(os.getcwd(), 'logs', 'log.txt'),
+           format="{message}", level="INFO", rotation="10 MB",
+           compression="zip")
 
 
 def create_html_catalog(catalog):
@@ -58,7 +59,7 @@ def download(url, path_=os.getcwd()):
         replace_content(filepath, LIST_, url, catalog_name)
         for link in tqdm(downloaded_list, desc='Download Files', unit=' kb'):
             download_url(link, catalog)
-        logger.info(f"Done. You can open saved page from: {filepath}")
+        print(f"Done. You can open saved page from: {filepath}")
         return filepath
     except Exception:
         raise TypeError('Ошибка')
