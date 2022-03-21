@@ -1,9 +1,7 @@
-from urllib.parse import urljoin, urlparse
-
 from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 
-from page_loader.url import create_filename_for_file, create_link
+from page_loader.url import create_link
 
 
 def find_content(file, source, url):
@@ -26,22 +24,9 @@ def replace_content(file, source, origin_url, catalog):
         for item in tqdm(source, desc='Formatting HTML'):
             tag, arg = item
             for link in content.find_all(tag):
-                if link.get(arg) is not None:
-                    if not link.get(arg).startswith('http'):
-                        q = urljoin(origin_url, link.get(arg))
-                        if urlparse(q).netloc == \
-                                urlparse(origin_url).netloc:
-                            filename = \
-                                create_filename_for_file(q)
-                            filepath = catalog + '/' + filename
-                            link[arg] = filepath
-                    else:
-                        if urlparse(link.get(arg)).netloc == \
-                                urlparse(origin_url).netloc:
-                            filename = \
-                                create_filename_for_file(link.get(arg))
-                            filepath = catalog + '/' + filename
-                            link[arg] = filepath
+                link_name = create_link(origin_url, link, arg)
+                if link_name is not None:
+                    link[arg] = catalog + '/' + link_name
         content = content.prettify()
     with open(file, 'w+', encoding='utf-8') as rewrite_file:
         rewrite_file.write(str(content))
