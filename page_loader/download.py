@@ -5,9 +5,9 @@ import requests
 from loguru import logger
 from tqdm import tqdm
 
-from page_loader.content import find_content, \
-    create_filename_for_file, replace_content
 from page_loader.exceptions import check_url_response, is_path_exist
+from page_loader.html import find_content, replace_content
+from page_loader.url import create_filename_for_file
 
 IMG = ('img', 'src')
 SCRIPT = ('script', 'src')
