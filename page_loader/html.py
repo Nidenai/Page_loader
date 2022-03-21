@@ -1,13 +1,16 @@
 from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup as bs
+from loguru import logger
 from tqdm import tqdm
 
+from page_loader.scripts.logger import logger_script
 from page_loader.url import create_filename_for_file, create_link
 
 
 def find_content(file, source, url):
     """Функция собирает в список весь контент по тегам, зашитым в source"""
+    logger_script()
     result = []
     tag, arg = source
     with open(file, 'r', encoding='utf-8') as content:
@@ -16,6 +19,7 @@ def find_content(file, source, url):
             link_name = create_link(url, link, arg)
             if link_name is not None:
                 result.append(link_name)
+    logger.info(result)
     return result
 
 
