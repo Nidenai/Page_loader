@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 
-from page_loader.url import create_link
+from page_loader.url import create_link, create_filename_for_file
 
 
 def find_content(file, source, url):
@@ -26,7 +26,7 @@ def replace_content(file, source, origin_url, catalog):
             for link in content.find_all(tag):
                 link_name = create_link(origin_url, link, arg)
                 if link_name is not None:
-                    link[arg] = catalog + '/' + link_name
+                    link[arg] = catalog + '/' + create_filename_for_file(link_name)
         content = content.prettify()
     with open(file, 'w+', encoding='utf-8') as rewrite_file:
         rewrite_file.write(str(content))
