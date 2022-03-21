@@ -16,9 +16,15 @@ def find_content(file, source, url):
     with open(file, 'r', encoding='utf-8') as content:
         soup = bs(content, 'html.parser')
         for link in soup.find_all(tag):
-            link_name = create_link(url, link, arg)
-            if link_name is not None:
-                result.append(link_name)
+            if link.get(arg) is not None:
+                if not link.get(arg).startswith('http'):
+                    q = urljoin(url, link.get(arg))
+                    if urlparse(q).netloc == urlparse(url).netloc:
+                        result.append(q)
+                else:
+                    if urlparse(link.get(arg)).netloc == \
+                            urlparse(url).netloc:
+                        result.append(link.get(arg))
     logger.info(result)
     return result
 
