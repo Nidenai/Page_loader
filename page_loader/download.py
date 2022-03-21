@@ -20,8 +20,6 @@ def create_html_catalog(catalog):
     name = catalog.replace('.html', '_files')
     if not os.path.exists(name):
         os.mkdir(name)
-    else:
-        pass
 
 
 def download_url(url, path_=os.getcwd(), filename=None):
