@@ -34,7 +34,7 @@ def create_link(url, link, arg):
             name = urljoin(url, link.get(arg))
             if urlparse(name).netloc == urlparse(url).netloc:
                 result = name
-            else:
-                if urlparse(link.get(arg)).netloc == urlparse(url).netloc:
-                    result = link.get(arg)
+        else:
+            if urlparse(link.get(arg)).netloc == urlparse(url).netloc:
+                result = link.get(arg)
     return result
