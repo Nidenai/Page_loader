@@ -61,4 +61,3 @@ def download(url, path_=os.getcwd()):
         raise TypeError('Ошибка')
     logger.info(f"Done. You can open saved page from: {filepath}")
     return filepath
-
