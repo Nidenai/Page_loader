@@ -1,6 +1,5 @@
 import os
 import requests
-import requests_mock
 
 
 def existing_path(catalog):
@@ -12,6 +11,6 @@ def existing_path(catalog):
 def check_url_response(url):
     """Функция проверят ссылку на ответ"""
     try:
-        requests.get(url).status_code
+        requests.get(url).raise_for_status()
     except requests.exceptions:
         raise TypeError('Ошибочная ссылка')
