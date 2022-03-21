@@ -12,8 +12,6 @@ def existing_path(catalog):
 def check_url_response(url):
     """Функция проверят ссылку на ответ"""
     try:
-        with requests_mock.Mocker() as m:
-            m.get(url)
-            requests.get(url).status_code
+        requests.get(url).status_code
     except requests.exceptions:
         raise TypeError('Ошибочная ссылка')
