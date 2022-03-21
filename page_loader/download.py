@@ -4,7 +4,7 @@ import requests
 from loguru import logger
 from tqdm import tqdm
 
-from page_loader.exceptions import check_url_response, is_path_exist
+from page_loader.exceptions import check_url_response, existing_path
 from page_loader.html import find_content, replace_content
 from page_loader.scripts.logger import logger_script
 from page_loader.url import create_filename_for_file
@@ -27,7 +27,7 @@ def create_html_catalog(catalog):
 def download_url(url, path_=os.getcwd(), filename=None):
     """Функция скачивает контент по ссылке,
     по умолчанию в рабочую директорию"""
-    is_path_exist(path_)
+    existing_path(path_)
     check_url_response(url)
     if filename is None:
         filename = create_filename_for_file(url)

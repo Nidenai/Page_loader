@@ -2,12 +2,10 @@ import os
 import requests
 
 
-def is_path_exist(catalog):
+def existing_path(catalog):
     """Функция, проверяющий правильность каталога"""
     if not os.path.exists(catalog):
         raise TypeError('Путь не существует')
-    elif catalog == os.path.join('sys'):
-        raise TypeError('Нельзя сюда сохранять')
     elif os.path.exists(catalog):
         pass
 
