@@ -6,8 +6,6 @@ def existing_path(catalog):
     """Функция, проверяющий правильность каталога"""
     if not os.path.exists(catalog):
         raise TypeError('Путь не существует')
-    elif os.path.exists(catalog):
-        pass
 
 
 def check_url_response(url):
