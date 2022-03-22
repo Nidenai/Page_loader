@@ -76,7 +76,8 @@ def test_page_all():
     assert lenght == 15
     check = os.path.isfile(os.path.join(PATH, CATALOG_NAME,
                                         'mirf-ru-wp-'
-                                        'content-themes-mirf-css-delement.css'))
+                                        'content-themes-mirf'
+                                        '-css-delement.css'))
     assert check is True
 
 
