@@ -1,8 +1,10 @@
 import os
-from tqdm import tqdm
-import requests_mock
 import shutil
-from page_loader.download import download, download_url, \
+
+import requests_mock
+from tqdm import tqdm
+
+from page_loader.download import download_url, \
     LIST_, create_html_catalog
 from page_loader.html import find_content
 from page_loader.url import create_filename_for_file
@@ -50,7 +52,7 @@ def test_page_download():
     ready()
     with requests_mock.Mocker(real_http=True) as m:
         m.get(URL)
-        download(URL, PATH)
+        download_url(URL, PATH)
         check = os.path.isfile(os.path.join(PATH, NAME))
         assert check is True
 
