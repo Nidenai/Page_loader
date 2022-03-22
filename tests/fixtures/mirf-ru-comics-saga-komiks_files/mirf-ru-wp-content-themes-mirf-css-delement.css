@@ -1,0 +1,21 @@
+article .text_content ul li {
+  list-style-position: inside;
+}
+
+header .rpwe-title a {
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+
+header .rpwe-img .rpwe-thumb {
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.search-form--hints .search-field,
+.search-form--hints #searchsubmit {
+  z-index: 1257;
+}

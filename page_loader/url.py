@@ -18,8 +18,6 @@ def create_filename_for_file(name):
         filename = filename.replace('--', '', 1)
     elif filename.startswith('-'):
         filename = filename.replace('-', '', 1)
-    else:
-        pass
     if file_extension == '':
         result = filename + '.html'
     else:
