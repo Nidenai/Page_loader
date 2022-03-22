@@ -50,6 +50,7 @@ def ready():
 
 def test_page_download():
     ready()
+    create_html_catalog(os.path.join(PATH, NAME))
     with requests_mock.Mocker(real_http=True) as m:
         m.get(URL)
         download_url(URL, PATH)
@@ -59,8 +60,7 @@ def test_page_download():
 
 def test_page_all():
     ready()
-    filename = os.path.join(PATH, NAME)
-    create_html_catalog(filename)
+    create_html_catalog(os.path.join(PATH, NAME))
     filepath = os.path.join(PATH, CATALOG_NAME)
     list_ = []
     for item in LIST_:
