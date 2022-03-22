@@ -5,7 +5,7 @@ import requests_mock
 from tqdm import tqdm
 
 from page_loader.download import download_url, \
-    LIST_, create_html_catalog
+    LIST_
 from page_loader.html import find_content
 from page_loader.url import create_filename_for_file
 
