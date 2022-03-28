@@ -15,13 +15,6 @@ LINK = ('link', 'href')
 LIST_ = [IMG, SCRIPT, LINK]
 
 
-def create_html_catalog(catalog):
-    """Функция создает каталог для ресурсов страницы"""
-    name = catalog.replace('.html', '_files')
-    if not os.path.exists(name):
-        os.mkdir(name)
-
-
 def download_url(url, path_=os.getcwd(), filename=None):
     """Функция скачивает контент по ссылке,
     по умолчанию в рабочую директорию"""
@@ -45,8 +38,9 @@ def download(url, path_=os.getcwd()):
     except Exception:
         raise Exception
     filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
-    create_html_catalog(filepath)
     catalog = os.path.normpath(filepath).replace('.html', '_files')
+    if not os.path.exists(catalog):
+        os.mkdir(catalog)
     catalog_name = os.path.basename(str(catalog))
     downloaded_list = []
     for item in tqdm(LIST_, desc='Getting resourses'):
