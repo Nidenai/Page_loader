@@ -46,7 +46,6 @@ def download(url, path_=os.getcwd()):
     for item in tqdm(LIST_, desc='Getting resourses'):
         sample = find_content(filepath, item, url)
         downloaded_list = downloaded_list + sample
-    logger.info(downloaded_list)
     replace_content(filepath, LIST_, url, catalog_name)
     for link in tqdm(downloaded_list, desc='Download Files', unit=' kb'):
         try:
