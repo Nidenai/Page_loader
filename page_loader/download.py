@@ -52,6 +52,6 @@ def download(url, path_=os.getcwd()):
         for link in tqdm(downloaded_list, desc='Download Files', unit=' kb'):
             download_url(link, catalog)
     except Exception:
-        raise TypeError('Ошибка')
+        logger.info('Что-то не скачивается')
     logger.info(f"Done. You can open saved page from: {filepath}")
     return filepath
