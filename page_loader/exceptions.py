@@ -13,4 +13,4 @@ def check_url_response(url):
     try:
         requests.get(url).raise_for_status()
     except requests.exceptions:
-        raise TypeError('Ошибочная ссылка')
+        raise requests.exceptions
