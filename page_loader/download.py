@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 from page_loader.exceptions import check_url_response, existing_path
 from page_loader.html import find_content, replace_content
-from page_loader.scripts.logger import logger_script
+from page_loader.logger import logger_script
 from page_loader.url import create_filename_for_file
 
 IMG = ('img', 'src')
