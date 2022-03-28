@@ -30,6 +30,7 @@ def download_url(url, path_=os.getcwd(), filename=None):
         filename = create_filename_for_file(url)
     filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
     with requests.get(url, stream=True) as temp:
+        check_url_response(temp)
         with open(filepath, 'wb+') as downloaded_file:
             for chunk in temp.iter_content(chunk_size=128):
                 downloaded_file.write(chunk)
