@@ -43,7 +43,7 @@ def download(url, path_=os.getcwd()):
         download_url(url, path_, filename)
         logger.info(f'Resource by {url}] was downloaded: {filename}')
     except Exception:
-        raise TypeError('Ошибка')
+        raise Exception
     filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
     create_html_catalog(filepath)
     catalog = os.path.normpath(filepath).replace('.html', '_files')
