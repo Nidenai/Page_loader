@@ -26,7 +26,6 @@ def download_url(url, path_=os.getcwd(), filename=None):
     """Функция скачивает контент по ссылке,
     по умолчанию в рабочую директорию"""
     existing_path(path_)
-    check_url_response(url)
     if filename is None:
         filename = create_filename_for_file(url)
     filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
