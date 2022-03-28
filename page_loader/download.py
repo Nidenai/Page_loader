@@ -48,10 +48,10 @@ def download(url, path_=os.getcwd()):
         downloaded_list = downloaded_list + sample
     logger.info(downloaded_list)
     replace_content(filepath, LIST_, url, catalog_name)
-    try:
-        for link in tqdm(downloaded_list, desc='Download Files', unit=' kb'):
+    for link in tqdm(downloaded_list, desc='Download Files', unit=' kb'):
+        try:
             download_url(link, catalog)
-    except Exception:
-        logger.info('Что-то не скачивается')
+        except Exception:
+            logger.info(f'Link {link} cannot be downloaded')
     logger.info(f"Done. You can open saved page from: {filepath}")
     return filepath
