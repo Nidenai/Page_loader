@@ -15,8 +15,10 @@ NAME = 'mirf-ru-comics-saga-komiks.html'
 FIXTURE_PATH = os.path.join(os.getcwd(), 'tests', 'fixtures')
 CATALOG_NAME = 'mirf-ru-comics-saga-komiks_files'
 FIXTURE_FIND_FILE = os.path.join(FIXTURE_PATH, 'fixture_find.html')
-CONTENT_FIXTURE = os.path.join(FIXTURE_PATH, 'mirf-ru-comics-saga-komiks_files',
-                               'mirf-ru-wp-content-plugins-push-js-push-lib.js')
+CONTENT_FIXTURE = os.path.join(FIXTURE_PATH, 'mirf-ru-comics-sa'
+                                             'ga-komiks_files',
+                               'mirf-ru-wp-content-plugins-p'
+                               'ush-js-push-lib.js')
 URL_FOR_CONTENT = 'https://www.mirf.ru/wp-content/plugins/push/js/push.lib.js'
 fixture_list = ['https://docs.python-requests.org'
                 '/_static/requests-sidebar.png',
