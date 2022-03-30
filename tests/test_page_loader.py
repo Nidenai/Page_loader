@@ -5,7 +5,7 @@ import requests_mock
 from tqdm import tqdm
 
 from page_loader.download import download_url, \
-    LIST_, download, save_file
+    download, save_file
 from page_loader.html import prepare
 from page_loader.url import create_filename_for_file
 
@@ -63,19 +63,16 @@ def test_page_download():
         assert check is True
 
 
-def test_page_all():
+def astest_page_all():
     ready()
     os.makedirs(os.path.join(PATH, CATALOG_NAME))
     filepath = os.path.join(PATH, CATALOG_NAME)
-    list_ = []
-    for item in LIST_:
-        sample = prepare(os.path.join(os.getcwd(),
-                                      'tests',
-                                      'fixtures',
-                                      'download_resourses.html'),
-                         item, URL, PATH)
-        list_ = list_ + sample
-    for link in tqdm(list_):
+    sample = prepare(os.path.join(os.getcwd(),
+                                  'tests',
+                                  'fixtures',
+                                  'download_resourses.html'),
+                     URL, PATH)
+    for link in tqdm(sample):
         with requests_mock.Mocker(real_http=True) as m:
             m.get(URL)
             content = download_url(link)
@@ -90,13 +87,10 @@ def test_page_all():
 
 
 def test_find_content():
-    list_ = []
-    for item in LIST_:
-        sample = prepare(FIXTURE_FIND_FILE, item,
-                         'https://docs.python-requests.org/',
-                         PATH)
-        list_ = list_ + sample
-    assert list_ == fixture_list
+    sample = prepare(FIXTURE_FIND_FILE,
+                     'https://docs.python-requests.org/',
+                     PATH)
+    assert sample == fixture_list
 
 
 def test_naming():

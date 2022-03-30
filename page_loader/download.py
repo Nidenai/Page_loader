@@ -9,11 +9,6 @@ from page_loader.html import prepare
 from page_loader.logger import logger_script
 from page_loader.url import create_filename_for_file
 
-IMG = ('img', 'src')
-SCRIPT = ('script', 'src')
-LINK = ('link', 'href')
-LIST_ = [IMG, SCRIPT, LINK]
-
 
 def download_url(url):
     link = requests.get(url)
@@ -42,10 +37,7 @@ def download(url, path_=os.getcwd()):
     if not os.path.exists(catalog):
         os.mkdir(catalog)
     catalog_name = os.path.basename(str(catalog))
-    resourses = []
-    for item in tqdm(LIST_, desc='Getting resourses'):
-        sample = prepare(filepath, item, url, catalog_name)
-        resourses = resourses + sample
+    resourses = prepare(filepath, url, catalog_name)
     for link in tqdm(resourses, desc='Download Files', unit=' kb'):
         try:
             content = download_url(link)

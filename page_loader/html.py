@@ -1,19 +1,26 @@
+import requests
 from bs4 import BeautifulSoup as bs
+from tqdm import tqdm
 
 from page_loader.url import create_link, create_filename_for_file
 
 
-def prepare(file, source, origin_url, catalog):
+def prepare(file, origin_url, catalog):
+    IMG = ('img', 'src')
+    SCRIPT = ('script', 'src')
+    LINK = ('link', 'href')
+    LIST_ = [IMG, SCRIPT, LINK]
     resources = []
-    tag, arg = source
-    with open(file, 'r', encoding='utf-8') as content:
-        soup = bs(content, 'html.parser')
-        for link in soup.find_all(tag):
+    content = requests.get(origin_url).content
+    soup = bs(content, 'html.parser')
+    for item in LIST_:
+        tag, arg = item
+        for link in tqdm(soup.find_all(tag)):
             link_name = create_link(origin_url, link, arg)
             if link_name is not None:
                 resources.append(link_name)
                 link[arg] = catalog + '/' + create_filename_for_file(link_name)
-        final_content = soup.prettify()
+    final_content = soup.prettify()
     with open(file, 'w+', encoding='utf-8') as rewrite_file:
         rewrite_file.write(str(final_content))
     return resources
