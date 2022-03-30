@@ -78,7 +78,7 @@ def test_page_all():
     for link in tqdm(list_):
         with requests_mock.Mocker(real_http=True) as m:
             m.get(URL)
-            content =  download_url(link)
+            content = download_url(link)
             save_file(content, filepath, url=link)
     lenght = len(os.listdir(os.path.join(PATH, CATALOG_NAME)))
     assert lenght == 15
@@ -118,9 +118,9 @@ def test_download():
 
 def astest_resourse():
     with open(CONTENT_FIXTURE) as f:
-        content = bytes(f.read(), encoding='utf-8')
+        content = f.read()
         with requests_mock.Mocker() as m:
-            m.get(URL_FOR_CONTENT, byte=content)
+            m.get(URL_FOR_CONTENT, text=content)
             download_url(URL_FOR_CONTENT)
             save_file(content, PATH, url=URL_FOR_CONTENT)
             with \
