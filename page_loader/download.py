@@ -39,12 +39,12 @@ def download(url, path_=os.getcwd()):
     if not os.path.exists(catalog):
         os.mkdir(catalog)
     catalog_name = os.path.basename(str(catalog))
-    downloaded_list = []
+    resourses = []
     for item in tqdm(LIST_, desc='Getting resourses'):
         sample = find_content(filepath, item, url)
-        downloaded_list = downloaded_list + sample
+        resourses = resourses + sample
     replace_content(filepath, LIST_, url, catalog_name)
-    for link in tqdm(downloaded_list, desc='Download Files', unit=' kb'):
+    for link in tqdm(resourses, desc='Download Files', unit=' kb'):
         try:
             download_url(link, catalog)
         except Exception:
