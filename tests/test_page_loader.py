@@ -2,12 +2,13 @@ import os
 import shutil
 
 import requests_mock
+from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 
 from page_loader.download import download_url, \
     download, save_file
 from page_loader.html import prepare
-from page_loader.url import create_filename_for_file
+from page_loader.url import create_filename_for_file, create_link
 
 URL = 'https://www.mirf.ru/comics/saga-komiks'
 PATH = os.path.join(os.getcwd(), 'tests', 'tmp')
@@ -43,6 +44,13 @@ fixture_list = ['https://docs.python-requests.org'
                 '/user/install/',
                 'https://docs.python-requests.org'
                 '/_static/custom.css']
+URL_FOR_URLTEST = 'https://www.mirf.ru'
+ARG_FOR_URLTEST = 'src'
+TAG_FOR_URLTEST = bs('<img alt="" src="https://www.mirf.'
+                     'ru/wp-content/uploads/2021/10/Shape'
+                     '.svg" style="height:18px;"/>',
+                     'html.parser').img
+CORRECT_ANSWER = 'https://www.mirf.ru/wp-content/uploads/2021/10/Shape.svg'
 
 
 def ready():
@@ -63,7 +71,7 @@ def test_page_download():
         assert check is True
 
 
-def astest_page_all():
+def test_page_all():
     ready()
     os.makedirs(os.path.join(PATH, CATALOG_NAME))
     filepath = os.path.join(PATH, CATALOG_NAME)
@@ -78,7 +86,7 @@ def astest_page_all():
             content = download_url(link)
             save_file(content, filepath, url=link)
     lenght = len(os.listdir(os.path.join(PATH, CATALOG_NAME)))
-    assert lenght == 15
+    assert lenght == 129
     check = os.path.isfile(os.path.join(PATH, CATALOG_NAME,
                                         'mirf-ru-wp-'
                                         'content-themes-mirf'
@@ -86,16 +94,18 @@ def astest_page_all():
     assert check is True
 
 
-def test_find_content():
+def test_html():
     sample = prepare(FIXTURE_FIND_FILE,
                      'https://docs.python-requests.org/',
                      PATH)
     assert sample == fixture_list
 
 
-def test_naming():
+def test_url():
     name = create_filename_for_file(URL)
     assert name == NAME
+    link = create_link(URL_FOR_URLTEST, TAG_FOR_URLTEST, ARG)
+    assert link == CORRECT_ANSWER
 
 
 def test_download():
@@ -111,16 +121,16 @@ def test_download():
             assert check_folder is True
 
 
-def astest_resourse():
+def test_resourse():
     with open(CONTENT_FIXTURE) as f:
-        content = f.read()
+        fixture = f.read()
         with requests_mock.Mocker() as m:
-            m.get(URL_FOR_CONTENT, text=content)
-            download_url(URL_FOR_CONTENT)
+            m.get(URL_FOR_CONTENT, text=fixture)
+            content = download_url(URL_FOR_CONTENT)
             save_file(content, PATH, url=URL_FOR_CONTENT)
             with \
                     open(os.path.join(PATH,
                                       'mirf-ru-wp-content-plugins-push'
                                       '-js-push-lib.js')) as q:
                 compare = q.read()
-                assert compare == content
+                assert compare == fixture
