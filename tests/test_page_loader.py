@@ -104,7 +104,7 @@ def test_html():
 def test_url():
     name = create_filename_for_file(URL)
     assert name == NAME
-    link = create_link(URL_FOR_URLTEST, TAG_FOR_URLTEST, ARG)
+    link = create_link(URL_FOR_URLTEST, TAG_FOR_URLTEST, ARG_FOR_URLTEST)
     assert link == CORRECT_ANSWER
 
 
