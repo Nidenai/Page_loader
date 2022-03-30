@@ -1,6 +1,5 @@
 import os
 
-import requests
 from loguru import logger
 from tqdm import tqdm
 
@@ -8,6 +7,7 @@ from page_loader.exceptions import check_url_response, existing_path
 from page_loader.html import find_content, replace_content
 from page_loader.logger import logger_script
 from page_loader.url import create_filename_for_file
+import urllib.request
 
 IMG = ('img', 'src')
 SCRIPT = ('script', 'src')
@@ -15,24 +15,26 @@ LINK = ('link', 'href')
 LIST_ = [IMG, SCRIPT, LINK]
 
 
-def download_url(url, path_=os.getcwd(), filename=None):
-    """Функция скачивает контент по ссылке,
-    по умолчанию в рабочую директорию"""
+def download_url(url):
+    check_url_response(url)
+    content = urllib.request.urlopen(url).read()
+    return content
+
+
+def save_file(content, path_=os.getcwd(), filename=None, url=None):
     existing_path(path_)
     if filename is None:
         filename = create_filename_for_file(url)
     filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
-    with requests.get(url, stream=True) as temp:
-        check_url_response(temp)
-        with open(filepath, 'wb+') as downloaded_file:
-            for chunk in temp.iter_content(chunk_size=128):
-                downloaded_file.write(chunk)
+    with open(filepath, 'wb+') as downloaded_file:
+        downloaded_file.write(content)
 
 
 def download(url, path_=os.getcwd()):
     logger_script()
     filename = create_filename_for_file(url)
-    download_url(url, path_, filename)
+    main_page = download_url(url)
+    save_file(main_page, path_, filename)
     logger.info(f'Resource by {url}] was downloaded: {filename}')
     filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
     catalog = os.path.normpath(filepath).replace('.html', '_files')
@@ -46,7 +48,8 @@ def download(url, path_=os.getcwd()):
     replace_content(filepath, LIST_, url, catalog_name)
     for link in tqdm(resourses, desc='Download Files', unit=' kb'):
         try:
-            download_url(link, catalog)
+            contetn = download_url(link)
+            save_file(contetn, catalog, url=link)
         except Exception:
             logger.info(f'Link {link} cannot be downloaded')
     logger.info(f"Done. You can open saved page from: {filepath}")

@@ -11,6 +11,6 @@ def existing_path(catalog):
 def check_url_response(url):
     """Функция проверят ссылку на ответ"""
     try:
-        url.raise_for_status()
+        requests.get(url).raise_for_status()
     except requests.exceptions:
         raise requests.exceptions

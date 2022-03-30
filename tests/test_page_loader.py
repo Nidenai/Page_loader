@@ -5,7 +5,7 @@ import requests_mock
 from tqdm import tqdm
 
 from page_loader.download import download_url, \
-    LIST_, download
+    LIST_, download, save_file
 from page_loader.html import find_content
 from page_loader.url import create_filename_for_file
 
@@ -57,7 +57,8 @@ def test_page_download():
     os.makedirs(os.path.join(PATH, CATALOG_NAME))
     with requests_mock.Mocker(real_http=True) as m:
         m.get(URL)
-        download_url(URL, PATH)
+        content = download_url(URL)
+        save_file(content, PATH, url=URL)
         check = os.path.isfile(os.path.join(PATH, NAME))
         assert check is True
 
@@ -77,7 +78,8 @@ def test_page_all():
     for link in tqdm(list_):
         with requests_mock.Mocker(real_http=True) as m:
             m.get(URL)
-            download_url(link, filepath)
+            content =  download_url(link)
+            save_file(content, filepath, url=link)
     lenght = len(os.listdir(os.path.join(PATH, CATALOG_NAME)))
     assert lenght == 15
     check = os.path.isfile(os.path.join(PATH, CATALOG_NAME,
@@ -114,12 +116,13 @@ def test_download():
             assert check_folder is True
 
 
-def test_resourse():
+def astest_resourse():
     with open(CONTENT_FIXTURE) as f:
-        content = f.read()
+        content = bytes(f.read(), encoding='utf-8')
         with requests_mock.Mocker() as m:
-            m.get(URL_FOR_CONTENT, text=content)
-            download_url(URL_FOR_CONTENT, PATH)
+            m.get(URL_FOR_CONTENT, byte=content)
+            download_url(URL_FOR_CONTENT)
+            save_file(content, PATH, url=URL_FOR_CONTENT)
             with \
                     open(os.path.join(PATH,
                                       'mirf-ru-wp-content-plugins-push'
