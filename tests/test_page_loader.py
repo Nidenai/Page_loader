@@ -3,7 +3,7 @@ import shutil
 
 import requests_mock
 from bs4 import BeautifulSoup as bs
-from tqdm import tqdm
+from loguru import logger
 
 from page_loader.download import download_url, \
     download, save_file
@@ -16,34 +16,12 @@ NAME = 'mirf-ru-comics-saga-komiks.html'
 FIXTURE_PATH = os.path.join(os.getcwd(), 'tests', 'fixtures')
 CATALOG_NAME = 'mirf-ru-comics-saga-komiks_files'
 FIXTURE_FIND_FILE = os.path.join(FIXTURE_PATH, 'fixture_find.html')
+RESOURSE_FILE = os.path.join(PATH, 'file_to_compare.html')
 CONTENT_FIXTURE = os.path.join(FIXTURE_PATH, 'mirf-ru-comics-sa'
                                              'ga-komiks_files',
                                'mirf-ru-wp-content-plugins-p'
                                'ush-js-push-lib.js')
 URL_FOR_CONTENT = 'https://www.mirf.ru/wp-content/plugins/push/js/push.lib.js'
-fixture_list = ['https://docs.python-requests.org'
-                '/_static/requests-sidebar.png',
-                'https://docs.python-requests.org'
-                '/_static/documentation_options.js',
-                'https://docs.python-requests.org'
-                '/_static/jquery.js', 'https://docs.python-req'
-                                      'uests.org/_static'
-                                      '/underscore.js',
-                'https://docs.python-requests.org'
-                '/_static/doctools.js',
-                'https://docs.python-requests.org'
-                '/_static/pygments.css',
-                'https://docs.python-requests.org'
-                '/_static/alabaster.css',
-                'https://docs.python-requests.org'
-                '/en/latest/index.html',
-                'https://docs.python-requests.org'
-                '/genindex/', 'https://docs.python-'
-                              'requests.org/search/',
-                'https://docs.python-requests.org'
-                '/user/install/',
-                'https://docs.python-requests.org'
-                '/_static/custom.css']
 URL_FOR_URLTEST = 'https://www.mirf.ru'
 ARG_FOR_URLTEST = 'src'
 TAG_FOR_URLTEST = bs('<img alt="" src="https://www.mirf.'
@@ -71,38 +49,21 @@ def test_page_download():
         assert check is True
 
 
-def test_page_all():
-    ready()
-    os.makedirs(os.path.join(PATH, CATALOG_NAME))
-    filepath = os.path.join(PATH, CATALOG_NAME)
-    sample = prepare(os.path.join(os.getcwd(),
-                                  'tests',
-                                  'fixtures',
-                                  'download_resourses.html'),
-                     URL, PATH)
-    for link in tqdm(sample):
-        with requests_mock.Mocker(real_http=True) as m:
-            m.get(URL)
-            content = download_url(link)
-            save_file(content, filepath, url=link)
-    lenght = len(os.listdir(os.path.join(PATH, CATALOG_NAME)))
-    assert lenght == 129
-    check = os.path.isfile(os.path.join(PATH, CATALOG_NAME,
-                                        'mirf-ru-wp-'
-                                        'content-themes-mirf'
-                                        '-css-delement.css'))
-    assert check is True
-
-
 def test_html():
     url = 'https://docs.python-requests.org/'
-    content = FIXTURE_FIND_FILE.read()
-    with requests_mock.Mocker() as m:
-        m.get(url, text=content)
-        sample = prepare(FIXTURE_FIND_FILE,
-                         url,
-                         PATH)
-    assert sample == fixture_list
+    with open(FIXTURE_FIND_FILE) as r:
+        content = r.read()
+        with requests_mock.Mocker() as m:
+            m.get(url, text=content)
+            sample = prepare(RESOURSE_FILE,
+                             url,
+                             PATH)
+            with open(os.path.join(os.getcwd(),
+                                   'tests',
+                                   'fixtures',
+                                   'resourses.txt')) as q:
+                fixture_list = q.read()
+    assert str(sample) == fixture_list
 
 
 def test_url():
