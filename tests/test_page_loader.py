@@ -3,7 +3,6 @@ import shutil
 
 import requests_mock
 from bs4 import BeautifulSoup as bs
-from loguru import logger
 
 from page_loader.download import download_url, \
     download, save_file
