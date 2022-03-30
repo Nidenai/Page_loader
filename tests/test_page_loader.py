@@ -95,9 +95,13 @@ def test_page_all():
 
 
 def test_html():
-    sample = prepare(FIXTURE_FIND_FILE,
-                     'https://docs.python-requests.org/',
-                     PATH)
+    url = 'https://docs.python-requests.org/'
+    content = FIXTURE_FIND_FILE.read()
+    with requests_mock.Mocker() as m:
+        m.get(url, text=content)
+        sample = prepare(FIXTURE_FIND_FILE,
+                         url,
+                         PATH)
     assert sample == fixture_list
 
 
