@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 from page_loader.download import download_url, \
     LIST_, download, save_file
-from page_loader.html import find_content
+from page_loader.html import prepare
 from page_loader.url import create_filename_for_file
 
 URL = 'https://www.mirf.ru/comics/saga-komiks'
@@ -69,11 +69,11 @@ def test_page_all():
     filepath = os.path.join(PATH, CATALOG_NAME)
     list_ = []
     for item in LIST_:
-        sample = find_content(os.path.join(os.getcwd(),
-                                           'tests',
-                                           'fixtures',
-                                           'download_resourses.html'),
-                              item, URL)
+        sample = prepare(os.path.join(os.getcwd(),
+                                      'tests',
+                                      'fixtures',
+                                      'download_resourses.html'),
+                         item, URL, PATH)
         list_ = list_ + sample
     for link in tqdm(list_):
         with requests_mock.Mocker(real_http=True) as m:
@@ -92,8 +92,9 @@ def test_page_all():
 def test_find_content():
     list_ = []
     for item in LIST_:
-        sample = find_content(FIXTURE_FIND_FILE, item,
-                              'https://docs.python-requests.org/')
+        sample = prepare(FIXTURE_FIND_FILE, item,
+                         'https://docs.python-requests.org/',
+                         PATH)
         list_ = list_ + sample
     assert list_ == fixture_list
 

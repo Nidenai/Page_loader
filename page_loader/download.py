@@ -5,7 +5,7 @@ from loguru import logger
 from tqdm import tqdm
 
 from page_loader.exceptions import check_url_response, existing_path
-from page_loader.html import find_content, replace_content
+from page_loader.html import prepare
 from page_loader.logger import logger_script
 from page_loader.url import create_filename_for_file
 
@@ -44,13 +44,12 @@ def download(url, path_=os.getcwd()):
     catalog_name = os.path.basename(str(catalog))
     resourses = []
     for item in tqdm(LIST_, desc='Getting resourses'):
-        sample = find_content(filepath, item, url)
+        sample = prepare(filepath, item, url, catalog_name)
         resourses = resourses + sample
-    replace_content(filepath, LIST_, url, catalog_name)
     for link in tqdm(resourses, desc='Download Files', unit=' kb'):
         try:
-            contetn = download_url(link)
-            save_file(contetn, catalog, url=link)
+            content = download_url(link)
+            save_file(content, catalog, url=link)
         except Exception:
             logger.info(f'Link {link} cannot be downloaded')
     logger.info(f"Done. You can open saved page from: {filepath}")
