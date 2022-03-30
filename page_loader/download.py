@@ -32,11 +32,8 @@ def download_url(url, path_=os.getcwd(), filename=None):
 def download(url, path_=os.getcwd()):
     logger_script()
     filename = create_filename_for_file(url)
-    try:
-        download_url(url, path_, filename)
-        logger.info(f'Resource by {url}] was downloaded: {filename}')
-    except Exception:
-        raise Exception
+    download_url(url, path_, filename)
+    logger.info(f'Resource by {url}] was downloaded: {filename}')
     filepath = os.path.join(os.getcwd(), os.path.normpath(path_), filename)
     catalog = os.path.normpath(filepath).replace('.html', '_files')
     if not os.path.exists(catalog):
