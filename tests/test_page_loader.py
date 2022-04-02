@@ -86,6 +86,7 @@ def test_download():
 
 
 def test_resourse():
+    ready()
     with open(CONTENT_FIXTURE) as f:
         fixture = f.read()
         with requests_mock.Mocker() as m:

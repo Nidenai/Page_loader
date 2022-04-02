@@ -26,4 +26,4 @@ def logger_script():
     logger.add(url_logger_path, format='{time} : {message}',
                level='DEBUG', filter=debug_only)
     logger.add(html_logger_path, format='{time} : {message}',
-               level='DEBUG', filter=trace_only)
+               level='TRACE', filter=trace_only)
